@@ -4,108 +4,1389 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Catalyst | AI-Powered App Development | Domo</title>
-    <meta name="description" content="Build intelligent data applications faster with AI assistance. App Catalyst accelerates development with smart templates, code generation, and automated testing.">
+    <meta name="description" content="Build intelligent data applications faster with AI assistance. Smart templates, code generation, and automated workflows accelerate development.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="App Catalyst | AI-Powered App Development | Domo">
+    <meta property="og:description" content="Build, deploy, and manage AI agents at scale with human oversight. Transform your AI ambitions into measurable results.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --domo-blue: #99CCEE; --domo-blue-dark: #7AB8E0; --dark-bg: #1a1a2e; --text-primary: #1a1a2e; --text-secondary: #4a5568; --white: #ffffff; --light-gray: #f7fafc; --border-gray: #e2e8f0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); line-height: 1.6; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        .nav { background: var(--white); padding: 16px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .nav .container { display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 32px; }
-        .nav-links { display: flex; gap: 32px; align-items: center; }
-        .nav-links a { color: var(--text-primary); text-decoration: none; font-weight: 500; }
-        .nav-ctas { display: flex; gap: 12px; }
-        .nav-btn { padding: 10px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; }
-        .nav-btn-outline { border: 2px solid var(--domo-blue); color: var(--text-primary); }
-        .nav-btn-primary { background: var(--domo-blue); color: var(--text-primary); }
-        .hero { padding: 80px 0; background: linear-gradient(135deg, #f8fcff 0%, #e8f4fc 100%); }
-        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-        .hero h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
-        .hero p { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; }
-        .hero-ctas { display: flex; gap: 16px; }
-        .btn { padding: 14px 28px; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-block; }
-        .btn-primary { background: var(--domo-blue); color: var(--text-primary); }
-        .btn-secondary { border: 2px solid var(--domo-blue); color: var(--text-primary); }
-        .hero-visual img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .trust { padding: 48px 0; background: var(--white); border-bottom: 1px solid var(--border-gray); }
-        .trust p { text-align: center; color: var(--text-secondary); margin-bottom: 24px; }
-        .trust-logos { display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap; opacity: 0.6; }
-        .section-header { text-align: center; max-width: 800px; margin: 0 auto 48px; }
-        .section-header h2 { font-size: 2.5rem; margin-bottom: 16px; }
-        .section-header p { color: var(--text-secondary); font-size: 1.125rem; }
-        .features { padding: 80px 0; background: var(--light-gray); }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .feature-card { background: var(--white); padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .feature-icon { width: 48px; height: 48px; background: var(--domo-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-        .feature-icon svg { width: 24px; height: 24px; stroke: var(--text-primary); }
-        .feature-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
-        .feature-card p { color: var(--text-secondary); margin-bottom: 16px; }
-        .feature-link { color: var(--domo-blue-dark); text-decoration: none; font-weight: 600; }
-        .value-props { padding: 80px 0; background: var(--white); }
-        .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-        .value-item { text-align: center; }
-        .value-number { font-size: 3.5rem; font-weight: 700; color: var(--domo-blue-dark); margin-bottom: 8px; }
-        .value-item h3 { font-size: 1.125rem; margin-bottom: 8px; }
-        .value-item p { color: var(--text-secondary); font-size: 0.9rem; }
-        .testimonials { padding: 80px 0; background: var(--light-gray); }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .testimonial-card { background: var(--white); padding: 32px; border-radius: 12px; }
-        .testimonial-quote { font-size: 1rem; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
-        .testimonial-author h4 { font-size: 1rem; margin-bottom: 4px; }
-        .testimonial-author p { color: var(--text-secondary); font-size: 0.875rem; }
-        .cta-section { padding: 80px 0; background: var(--dark-bg); color: var(--white); text-align: center; }
-        .cta-section h2 { font-size: 2.5rem; margin-bottom: 16px; }
-        .cta-section p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; }
-        .btn-white { background: var(--white); color: var(--text-primary); }
-        .domo-footer { background: #000; color: var(--white); padding: 64px 0 32px; }
-        .footer-logo { text-align: center; margin-bottom: 48px; }
-        .footer-logo img { height: 40px; filter: brightness(0) invert(1); }
-        .footer-columns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; margin-bottom: 48px; }
-        .footer-col h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
-        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; padding: 6px 0; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; display: flex; justify-content: space-between; font-size: 0.875rem; color: rgba(255,255,255,0.5); }
-        .footer-legal { display: flex; gap: 24px; }
-        .footer-legal a { color: rgba(255,255,255,0.5); text-decoration: none; }
-        @media (max-width: 992px) { .hero-content { grid-template-columns: 1fr; } .features-grid, .testimonials-grid { grid-template-columns: 1fr; } .value-grid { grid-template-columns: repeat(2, 1fr); } .footer-columns { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2.25rem; } }
-        @media (max-width: 768px) { .nav-links { display: none; } .value-grid, .footer-columns { grid-template-columns: 1fr; } .cta-buttons { flex-direction: column; align-items: center; } }
+        /* ========================================
+           DOMO DESIGN SYSTEM
+           ======================================== */
+        :root {
+            /* Colors */
+            --domo-blue: #99CCEE;
+            --domo-blue-dark: #7AB8E0;
+            --neutral-lightest: #F1F6FA;
+            --neutral-light: #DCE4EA;
+            --neutral-mid: #B7C1CB;
+            --neutral-dark: #68737F;
+            --neutral-darkest: #3F454D;
+            --accent-orange: #FF9922;
+            --accent-orange-dark: #E8880F;
+            --accent-purple: #776CB0;
+            
+            /* Backgrounds */
+            --bg-primary: #FFFFFF;
+            --bg-primary-dark: #121416;
+            --bg-secondary: #F8FAFC;
+            
+            /* Typography */
+            --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Animation */
+            --timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+        }
+        
+        /* Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--neutral-darkest);
+            background: var(--bg-primary);
+        }
+        
+        img { max-width: 100%; height: auto; }
+        a { text-decoration: none; color: inherit; }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--neutral-dark);
+        }
+        
+        /* ========================================
+           STANDARD NAVIGATION (exact match domo.com)
+           ======================================== */
+        .domo-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #FFFFFF;
+            border-bottom: 1px solid #DCE4EA;
+        }
+        
+        .nav-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+            display: block;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .nav-link {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--neutral-darkest);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover { color: var(--domo-blue); }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        .nav-icon {
+            color: var(--neutral-darkest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .nav-icon:hover { color: var(--domo-blue); }
+        
+        .nav-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .nav-text-link {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--neutral-darkest);
+            text-decoration: none;
+        }
+        
+        .nav-text-link:hover { color: var(--domo-blue); }
+        
+        .nav-btn {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-btn-outline {
+            color: var(--neutral-darkest);
+            border: 1px solid var(--neutral-darkest);
+            background: transparent;
+        }
+        
+        .nav-btn-outline:hover {
+            border-color: var(--domo-blue);
+            color: var(--domo-blue);
+        }
+        
+        .nav-btn-primary {
+            background: var(--accent-orange);
+            color: white;
+            border: 1px solid var(--accent-orange);
+        }
+        
+        .nav-btn-primary:hover {
+            background: var(--accent-orange-dark);
+            border-color: var(--accent-orange-dark);
+        }
+        
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        .hero {
+            padding: calc(64px + 80px) 0 80px;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        
+        .hero-text h1 { margin-bottom: 24px; }
+        
+        .hero-text p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s var(--timing-function);
+        }
+        
+        .btn:hover { transform: scale(1.05); }
+        
+        .btn-primary {
+            background: var(--accent-orange);
+            color: white;
+        }
+        
+        .btn-primary:hover { background: var(--accent-orange-dark); }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--neutral-darkest);
+            border: 2px solid var(--neutral-mid);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--domo-blue);
+            background: rgba(153, 204, 238, 0.1);
+        }
+        
+        .hero-visual img {
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* ========================================
+           TRUST SECTION
+           ======================================== */
+        .trust {
+            padding: 48px 0;
+            background: var(--bg-primary);
+            border-top: 1px solid var(--neutral-light);
+            border-bottom: 1px solid var(--neutral-light);
+        }
+        
+        .trust-label {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--neutral-mid);
+            margin-bottom: 32px;
+        }
+        
+        .trust-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            opacity: 0.7;
+        }
+        
+        .trust-logo {
+            height: 32px;
+            filter: grayscale(100%) invert(1) brightness(0.3);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .trust-logo:hover {
+            filter: grayscale(0%) invert(1) brightness(0.1);
+            opacity: 1;
+        }
+        
+        /* ========================================
+           FEATURES SECTION
+           ======================================== */
+        .features { padding: 96px 0; }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 64px;
+        }
+        
+        .section-header h2 { margin-bottom: 16px; }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+        
+        .feature-card {
+            padding: 32px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            transition: all 0.3s var(--timing-function);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--domo-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--neutral-darkest);
+        }
+        
+        .feature-card h3 { margin-bottom: 12px; }
+        .feature-card p { font-size: 1rem; margin-bottom: 16px; }
+        
+        .feature-link {
+            font-weight: 600;
+            color: var(--domo-blue-dark);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .feature-link:hover { gap: 0.75rem; }
+        
+        /* ========================================
+           VALUE PROPS SECTION
+           ======================================== */
+        .value-props {
+            padding: 96px 0;
+            background: var(--bg-primary-dark);
+            color: white;
+        }
+        
+        .value-props h2 { color: white; }
+        .value-props p { color: var(--neutral-mid); }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            margin-top: 64px;
+        }
+        
+        .value-item {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .value-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--domo-blue);
+            line-height: 1;
+        }
+        
+        .value-item h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        /* ========================================
+           TAB NAVIGATION
+           ======================================== */
+        .product-tabs {
+            padding: 64px 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--neutral-light);
+        }
+        
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 12px 28px;
+            background: transparent;
+            border: 2px solid var(--neutral-light);
+            border-radius: 100px;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--neutral-dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            border-color: var(--domo-blue);
+            color: var(--neutral-darkest);
+        }
+        
+        .tab-btn.active {
+            background: var(--domo-blue);
+            border-color: var(--domo-blue);
+            color: var(--neutral-darkest);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tab-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        
+        .tab-panel-content h3 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        
+        .tab-panel-content p {
+            margin-bottom: 24px;
+        }
+        
+        .tab-panel-features {
+            list-style: none;
+        }
+        
+        .tab-panel-features li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            color: var(--neutral-dark);
+            border-bottom: 1px solid var(--neutral-light);
+        }
+        
+        .tab-panel-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-orange);
+            font-weight: 700;
+        }
+        
+        .tab-panel-visual {
+            background: linear-gradient(135deg, var(--domo-blue) 0%, var(--accent-purple) 100%);
+            border-radius: 16px;
+            padding: 48px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tab-panel-visual svg {
+            width: 120px;
+            height: 120px;
+            stroke: white;
+            stroke-width: 1.5;
+        }
+        
+        /* ========================================
+           TESTIMONIALS
+           ======================================== */
+        .testimonials {
+            padding: 96px 0;
+            background: var(--bg-primary);
+        }
+        
+        .testimonials .section-header {
+            margin-bottom: 64px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: left;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.125rem;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            color: var(--neutral-darkest);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .testimonial-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--neutral-light);
+        }
+        
+        .testimonial-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-info p {
+            font-size: 0.875rem;
+            color: var(--neutral-mid);
+        }
+        
+        /* ========================================
+           FAQ SECTION
+           ======================================== */
+        .faq {
+            padding: 96px 0;
+            background: var(--bg-secondary);
+        }
+        
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 24px 32px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: var(--font-family);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--neutral-darkest);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--neutral-lightest);
+        }
+        
+        .faq-question:after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--domo-blue);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.open .faq-question:after {
+            content: "−";
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            padding: 0 32px 24px;
+        }
+        
+        .faq-answer p {
+            color: var(--neutral-dark);
+            line-height: 1.7;
+        }
+        
+        /* ========================================
+           CTA SECTION
+           ======================================== */
+        .cta-section {
+            padding: 96px 0;
+            background: var(--domo-blue);
+            text-align: center;
+        }
+        
+        .cta-section h2 { margin-bottom: 16px; }
+        
+        .cta-section p {
+            color: var(--neutral-darkest);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--neutral-darkest);
+        }
+        
+        /* ========================================
+           STANDARD FOOTER (from domo.com)
+           ======================================== */
+        .domo-footer {
+            background: var(--bg-primary-dark);
+            color: var(--neutral-mid);
+            padding: 64px 0 48px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+        
+        .footer-logo img {
+            height: 48px;
+            display: block;
+        }
+        
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 48px;
+            max-width: 1000px;
+            margin: 0 auto 48px;
+        }
+        
+        .footer-col h4 {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--neutral-dark);
+            margin-bottom: 20px;
+        }
+        
+        .footer-col a {
+            display: block;
+            font-size: 15px;
+            color: white;
+            margin-bottom: 12px;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-col a:hover { color: var(--domo-blue); }
+        
+        .footer-language {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 64px;
+        }
+        
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: 1px solid var(--neutral-dark);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .footer-bottom {
+            background: #000000;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            margin-bottom: -48px;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .footer-social a {
+            color: white;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-social a:hover { color: var(--domo-blue); }
+        
+        .footer-social svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .footer-copyright {
+            font-size: 13px;
+            color: var(--neutral-dark);
+            margin-bottom: 16px;
+        }
+        
+        .footer-legal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        
+        .footer-legal a {
+            color: var(--neutral-dark);
+        }
+        
+        .footer-legal a:hover { color: white; }
+        
+        .footer-legal span {
+            color: var(--neutral-dark);
+        }
+        
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 1024px) {
+            .nav-links { display: none; }
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-ctas { justify-content: center; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .value-grid { grid-template-columns: 1fr; }
+            .tab-panel { grid-template-columns: 1fr; gap: 32px; }
+            .tab-panel-visual { order: -1; min-height: 200px; }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-columns { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container { padding: 0 24px; }
+            .nav-text-link, .nav-btn-outline { display: none; }
+            .features-grid { grid-template-columns: 1fr; }
+            .tabs-nav { gap: 8px; }
+            .tab-btn { padding: 10px 20px; font-size: 0.875rem; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .faq-question { padding: 20px 24px; font-size: 1rem; }
+            .faq-item.open .faq-answer { padding: 0 24px 20px; }
+            .footer-container { padding: 0 24px; }
+            .footer-columns { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .footer-legal { flex-direction: column; gap: 8px; }
+            .footer-legal span { display: none; }
+        }
     </style>
 </head>
 <body>
-    <nav class="nav"><div class="container"><a href="https://www.domo.com" class="nav-logo"><img src="assets/domo-logo-official.svg" alt="Domo"></a><div class="nav-links"><a href="https://www.domo.com/platform">Platform</a><a href="https://www.domo.com/solutions">Solutions</a><a href="https://www.domo.com/pricing">Pricing</a><a href="https://www.domo.com/resources">Resources</a></div><div class="nav-ctas"><a href="https://www.domo.com/form/watch-demo" class="nav-btn nav-btn-outline">Watch Demo</a><a href="https://www.domo.com/start/free" class="nav-btn nav-btn-primary">Try Free</a></div></div></nav>
-
-    <section class="hero"><div class="container"><div class="hero-content"><div class="hero-text"><h1>Build Smarter Apps, Faster</h1><p>App Catalyst supercharges application development with AI assistance, smart templates, and automated workflows. Ship data apps in days, not months.</p><div class="hero-ctas"><a href="https://www.domo.com/form/talk-to-sales" class="btn btn-primary">Talk to Sales</a><a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch a Demo</a></div></div><div class="hero-visual"><img src="assets/app-catalyst-hero.png" alt="App Catalyst AI-powered development interface" loading="lazy"></div></div></div></section>
-
-    <section class="trust"><div class="container"><p>Trusted by leading companies worldwide</p><div class="trust-logos"><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">ESPN</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">eBay</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Cisco</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Emerson</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">DHL</text></svg></div></div></section>
-
-    <section class="features"><div class="container"><div class="section-header"><h2>AI-Accelerated App Development</h2><p>App Catalyst combines intelligent automation with powerful development tools to help you build and deploy data applications faster than ever.</p></div><div class="features-grid">
-        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>AI Code Assistant</h3><p>Generate app components, write queries, and build logic with natural language prompts. AI accelerates every step.</p><a href="#" class="feature-link">Learn more →</a></div>
-        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div><h3>Smart Templates</h3><p>Start from intelligent templates that adapt to your data and use case. Not generic—personalized to your needs.</p><a href="#" class="feature-link">Learn more →</a></div>
-        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Auto-Generated APIs</h3><p>APIs created automatically as you build. No manual endpoint configuration or documentation.</p><a href="#" class="feature-link">Learn more →</a></div>
-        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><h3>Component Library</h3><p>Reusable UI components, data visualizations, and workflow elements. Build with proven building blocks.</p><a href="#" class="feature-link">Browse components →</a></div>
-        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>One-Click Deploy</h3><p>Deploy to production instantly. No DevOps required—apps scale automatically on Domo's infrastructure.</p><a href="#" class="feature-link">Learn more →</a></div>
-        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Built-In Testing</h3><p>Automated testing and quality checks catch issues before deployment. Ship with confidence.</p><a href="#" class="feature-link">Learn more →</a></div>
-    </div></div></section>
-
-    <section class="value-props"><div class="container"><div class="section-header"><h2>Results That Matter</h2><p>App Catalyst customers ship faster and build more with the same resources.</p></div><div class="value-grid">
-        <div class="value-item"><div class="value-number">80%</div><h3>Less Code</h3><p>AI assistance and smart templates eliminate boilerplate. Focus on logic, not plumbing.</p></div>
-        <div class="value-item"><div class="value-number">5x</div><h3>Faster Delivery</h3><p>What took months now takes weeks. Automated workflows remove bottlenecks.</p></div>
-        <div class="value-item"><div class="value-number">Zero</div><h3>DevOps Required</h3><p>Deploy instantly to production. Infrastructure managed automatically.</p></div>
-        <div class="value-item"><div class="value-number">100%</div><h3>Data Connected</h3><p>Apps connect directly to your Domo datasets. Always current, always governed.</p></div>
-    </div></div></section>
-
-    <section class="testimonials"><div class="container"><div class="section-header"><h2>What Our Customers Say</h2><p>See how companies are accelerating app development with App Catalyst</p></div><div class="testimonials-grid">
-        <div class="testimonial-card"><p class="testimonial-quote">"The AI code assistant is incredible. I described what I needed in plain English and it generated 80% of the app. We shipped in a week what would have taken a month."</p><div class="testimonial-author"><h4>Kevin Zhang</h4><p>Lead Developer, Tech Company</p></div></div>
-        <div class="testimonial-card"><p class="testimonial-quote">"Our citizen developers are now building production apps. The smart templates and guardrails give them power without risk. IT just reviews and approves."</p><div class="testimonial-author"><h4>Amanda Foster</h4><p>VP of IT, Retail Enterprise</p></div></div>
-        <div class="testimonial-card"><p class="testimonial-quote">"We went from idea to deployed app in 3 days. The auto-generated APIs and one-click deployment removed all the friction from our process."</p><div class="testimonial-author"><h4>Chris Martinez</h4><p>Solutions Architect, Manufacturing</p></div></div>
-    </div></div></section>
-
-    <section class="cta-section"><div class="container"><h2>Ready to Accelerate App Development?</h2><p>See how App Catalyst can help you build and deploy intelligent data applications faster than ever.</p><div class="cta-buttons"><a href="https://www.domo.com/form/talk-to-sales" class="btn btn-white">Talk to Sales</a><a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch Demo</a></div></div></section>
-
-    <footer class="domo-footer"><div class="container"><div class="footer-logo"><a href="https://www.domo.com"><img src="assets/domo-logo-official.svg" alt="Domo"></a></div><div class="footer-columns"><div class="footer-col"><h4>Product</h4><a href="https://www.domo.com/platform">Platform Overview</a><a href="https://www.domo.com/pricing">Pricing</a></div><div class="footer-col"><h4>Solutions</h4><a href="https://www.domo.com/solutions">By Role</a><a href="https://www.domo.com/solutions">By Industry</a></div><div class="footer-col"><h4>Resources</h4><a href="https://www.domo.com/resources">Resource Library</a><a href="https://www.domo.com/blog">Blog</a></div><div class="footer-col"><h4>Company</h4><a href="https://www.domo.com/company">About</a><a href="https://www.domo.com/company/careers">Careers</a></div><div class="footer-col"><h4>Support</h4><a href="https://www.domo.com/support">Help Center</a><a href="https://dojo.domo.com">Domo Dojo</a></div></div><div class="footer-bottom"><p>© 2026 Domo, Inc. All rights reserved.</p><div class="footer-legal"><a href="https://www.domo.com/company/privacy">Privacy Policy</a><a href="https://www.domo.com/company/terms">Terms of Service</a></div></div></div></footer>
+    <!-- ========================================
+         NAVIGATION (exact match domo.com)
+         ======================================== -->
+    <nav class="domo-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="https://www.domo.com" class="nav-logo">
+                    <img src="assets/domo-logo-official.svg" alt="Domo">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="https://www.domo.com/platform" class="nav-link">Product</a>
+                    <a href="https://www.domo.com/industries/overview" class="nav-link">Solutions</a>
+                    <a href="https://www.domo.com/learn" class="nav-link">Resources</a>
+                    <a href="https://www.domo.com/partners/overview" class="nav-link">Partners</a>
+                    <a href="https://www.domo.com/company" class="nav-link">About</a>
+                    <a href="https://www.domo.com/pricing" class="nav-link">Pricing</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <a href="https://www.domo.com/search" class="nav-icon" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </a>
+                <a href="https://www.domo.com/login" class="nav-icon" aria-label="Log in">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                <a href="https://www.domo.com/form/talk-to-sales" class="nav-text-link">Contact Sales</a>
+                <a href="https://www.domo.com/form/watch-demo" class="nav-btn nav-btn-outline">Watch Demo</a>
+                <a href="https://www.domo.com/start/free" class="nav-btn nav-btn-primary">Try Free</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Build Smarter Apps, Faster</h1>
+                    <p>App Catalyst supercharges application development with AI assistance, smart templates, and automated workflows. Ship data apps in days, not months.</p>
+                    <div class="hero-ctas">
+                        <a href="https://www.domo.com/form/talk-to-sales" class="btn btn-primary">Talk to Sales</a>
+                        <a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch a Demo</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="assets/app-catalyst-hero.png" alt="App Catalyst AI-powered development" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         TRUST SECTION
+         ======================================== -->
+    <section class="trust">
+        <div class="container">
+            <p class="trust-label">Trusted by the world's leading enterprises</p>
+            <div class="trust-logos">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAzNSA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY1MDFfODA5OSkiPgo8cGF0aCBkPSJNMTcuMzg4NSAwLjM1Mjg2MkMxMC45ODc0IDAuMzUyODYyIDUuNDAzODIgMS41ODc0OCAwLjc5MTk5MiA0LjAyMjE4VjIzLjQ4NjhDMC43OTE5OTIgMjcuNTgyNiAyLjMzNjcyIDMxLjAwNzQgNS4yNTg0IDMzLjM5MzNDNy45NzExNCAzNS42MTAzIDE2LjM2MDcgMzkuMjYzNyAxNy4zODg4IDM5LjcwNzRDMTguMzYzOCAzOS4yODQ1IDI2Ljg1MjggMzUuNTc0OSAyOS41MjI2IDMzLjM5MzNDMzIuNDQyNSAzMS4wMDg3IDMzLjk4NzUgMjcuNTgyOSAzMy45ODc1IDIzLjQ4NjhWNC4wMjIxOEMyOS4zNzUxIDEuNTg3MTUgMjMuNzkxNiAwLjM1MjUzOSAxNy4zODc5IDAuMzUyNTM5TDE3LjM4ODUgMC4zNTI4NjJaTTI2Ljg2NjcgNC4xMjE3NUMyOC43NzU2IDQuMTQ2NjEgMzAuNjQ5OSA0LjI2NDEgMzIuNDYxOCA0LjQzMTgzVjIzLjQ4NjdDMzIuNDYxOCAyNy4xNDg1IDMxLjEyODEgMzAuMTA2MyAyOC41NTQ4IDMyLjIxODFDMjYuMjU1NiAzNC4xMDQyIDE5LjMyMzIgMzcuMTk4MyAxNy4zODg4IDM4LjA0NzlDMTUuNDI4NSAzNy4xODY5IDguNDc4NyAzNC4wNTM1IDYuMjIxMDUgMzIuMjE4OUMzLjY2Mjg2IDMwLjE0MzEgMi4zMTYzMSAyNy4xMTUxIDIuMzE2MzEgMjMuNDg3NVYxMi4zNTM0QzkuNjY3NzcgNS42MzY5IDE4LjU5NDcgNC4wMTQzOSAyNi44NjYxIDQuMTIyMThMMjYuODY2NyA0LjEyMTc1Wk0xNy44MjEyIDEyLjk5NDRDMTYuMjQ2MyAxMi45OTQ0IDE0Ljk3NTUgMTMuMzQ1MiAxMy45MjkzIDE0LjAxNzlWMzIuNzY1NUgxNi44MTc5VjI2LjcwODdDMTcuMTA2MiAyNi43OTM1IDE3LjUyNDYgMjYuODcyNyAxOC4xMTc0IDI2Ljg3MjdDMjEuMzIxNiAyNi44NzI3IDIzLjE2MzMgMjMuOTk1MSAyMy4xNjMzIDE5Ljc5MzVDMjMuMTYzMyAxNS42MDAyIDIxLjI2NjkgMTIuOTk0NCAxNy44MjEyIDEyLjk5NDRaTTI3LjY5MTQgMTIuOTk0NEMyNS43OTE3IDEzLjA0OTMgMjMuODA1IDE0LjQyMDMgMjMuODE3MSAxNi43NDQ0QzIzLjgyMiAxOC4yNzQ3IDI0LjI0NzggMTkuNDE5MiAyNi42Mjg1IDIwLjgxMDhDMjcuODk5MSAyMS41NTM4IDI4LjQxMSAyMi4wNDM0IDI4LjQzMyAyMi45NDYxQzI4LjQ1NzEgMjMuOTQ5NyAyNy43NjEzIDI0LjU1NDggMjYuNzAxOSAyNC41NTA3QzI1Ljc4MDQgMjQuNTQzNSAyNC42Nzg4IDI0LjAzNCAyMy45NDExIDIzLjM3OTdWMjYuMDI4QzI0Ljg0NTYgMjYuNTY1MyAyNS45NzQyIDI2LjkyMDUgMjcuMTE0NCAyNi45MjA1QzI5Ljk2OCAyNi45MjA1IDMxLjI0MjQgMjQuOTEyMyAzMS4yOTczIDIzLjA3MjFDMzEuMzUxNiAyMS4zOTQ5IDMwLjg4NjMgMjAuMTI1OCAyOC40NzM0IDE4LjcxMzNDMjcuMzk2NCAxOC4wODQgMjYuNTQ1NyAxNy42NzA1IDI2LjU3NDEgMTYuNjIzM0MyNi42MDI1IDE1LjYwMTIgMjcuNDU0MiAxNS4yNDIxIDI4LjI3MjEgMTUuMjQ5NEMyOS4yODExIDE1LjI1ODMgMzAuMjU3MiAxNS44MTUgMzAuODU5NSAxNi40MzA1VjEzLjkyOTZDMzAuMzUyIDEzLjU0IDI5LjI3NzEgMTIuOTQ2IDI3LjY5MTQgMTIuOTk0NFpNMy43OTEzOSAxMy4yODU2VjIyLjMyODdDMy43OTEzOSAyNS4zNzczIDUuMjM4OTYgMjYuOTIwNyA4LjA5NTg0IDI2LjkyMDdDOS44NjM2IDI2LjkyMDcgMTEuMzQ0MiAyNi41MTMxIDEyLjQ0NzEgMjUuNzY2VjEzLjI4NTdIOS41NjQ4M1YyNC4xMjg3QzkuMjUwNjQgMjQuMzQzMyA4Ljc4NDYgMjQuNDgwNCA4LjE5ODMzIDI0LjQ4MDRDNi44NzUxNiAyNC40ODA0IDYuNjc3NDMgMjMuMjcxNiA2LjY3NzQzIDIyLjQ1NlYxMy4yODU4TDMuNzkxMzkgMTMuMjg1NlpNMTcuODQwNyAxNS4zMTEzQzE5LjUxNjEgMTUuMzExMyAyMC4yMTA1IDE2LjY0MzggMjAuMjEwNSAxOS44NjY3QzIwLjIxMDUgMjMuMDExNCAxOS40MTYzIDI0LjUzMDYgMTcuNzU0NiAyNC41MzA2QzE3LjM2MzUgMjQuNTMwNiAxNy4wMjM2IDI0LjQzNDEgMTYuODE3MSAyNC4zNTY3VjE1LjUxOTVDMTcuMDUxMSAxNS40MDMzIDE3LjQ0ODcgMTUuMzExMyAxNy44NDA3IDE1LjMxMTNaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF82NTAxXzgwOTkiPgo8cmVjdCB3aWR0aD0iMzQiIGhlaWdodD0iNDAiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjUpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==" alt="UPS" class="trust-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA2MSAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY1MDFfODE1MykiPgo8cGF0aCBkPSJNNDkuMjkxNSAzMkM0OS4wMDM1IDMxLjk1MTQgNDguNzM5NSAzMS45MjcxIDQ4LjQ1MTUgMzEuODc4NkM0Ni4wOTk1IDMxLjQ0MTUgNDQuMzQ3NSAyOS41MjM1IDQ0LjEwNzUgMjcuMDk1NkM0My44Njc1IDI0Ljc2NDggNDUuMDE5NSAyMi42MjgyIDQ3LjA4MzUgMjEuNjMyN0M0OC4wOTE1IDIxLjEyMjkgNDkuMTcxNSAyMC45NzcyIDUwLjI5OTUgMjEuMTIyOUM1MS41OTU1IDIxLjI2ODYgNTIuNzIzNSAyMS44MjcgNTMuNjM1NSAyMi43OTgxQzU0LjY0MzUgMjMuODkwNyA1NS4xMjM1IDI1LjIwMTggNTUuMDc1NSAyNi42ODI4QzU1LjAyNzUgMjguMzA5NSA1NC40MDM1IDI5LjY2OTIgNTMuMTc5NSAzMC43MTMyQzUyLjM2MzUgMzEuNDE3MyA1MS40MDM1IDMxLjgwNTcgNTAuMzQ3NSAzMS45NTE0QzUwLjIwMzUgMzEuOTc1NyA1MC4wMzU1IDMyIDQ5Ljg5MTUgMzJDNDkuNjk5NSAzMiA0OS40ODM1IDMyIDQ5LjI5MTUgMzJaTTUyLjMxNTUgMjYuNTM3MUM1Mi4zMTU1IDI0Ljk4MzMgNTEuMTE1NSAyMy43NjkzIDQ5LjYwMzUgMjMuNzY5M0M0OC4wNjc1IDIzLjc2OTMgNDYuODkxNSAyNC45ODMzIDQ2Ljg5MTUgMjYuNTYxNEM0Ni44OTE1IDI4LjExNTMgNDguMDkxNSAyOS4zMjkzIDQ5LjYwMzUgMjkuMzI5M0M1MS4xMTU1IDI5LjMwNSA1Mi4zMTU1IDI4LjA5MSA1Mi4zMTU1IDI2LjUzNzFaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTI2LjA4MzYgMzEuOTk5OEMyNS43MjM2IDMxLjk3NTUgMjUuMzg3NiAzMS45NTEzIDI1LjAyNzYgMzEuOTAyN0MyNC41OTU2IDMxLjg1NDEgMjQuMTYzNiAzMS43ODEzIDIzLjc1NTYgMzEuNzA4NUMyMy43MDc2IDMxLjcwODUgMjMuNjU5NiAzMS42MzU2IDIzLjY1OTYgMzEuNjExM0MyMy42NTk2IDMwLjgzNDQgMjMuNjU5NiAzMC4wNTc1IDIzLjY1OTYgMjkuMjgwNUMyMy45NDc2IDI5LjM1MzQgMjQuMjExNiAyOS40MjYyIDI0LjQ5OTYgMjkuNDc0OEMyNS4yOTE2IDI5LjY0NDcgMjYuMDgzNiAyOS43MTc2IDI2Ljg3NTYgMjkuNjIwNUMyNy4xNjM2IDI5LjU3MTkgMjcuNDI3NiAyOS40OTkxIDI3LjY2NzYgMjkuMzUzNEMyOC4xMjM2IDI5LjAzNzggMjguMTk1NiAyOC40NzkzIDI3Ljc2MzYgMjguMTE1MUMyNy41NDc2IDI3Ljk0NTIgMjcuMjgzNiAyNy43OTk1IDI3LjAxOTYgMjcuNzAyNEMyNi41Mzk2IDI3LjUwODIgMjYuMDM1NiAyNy4zODY4IDI1LjU3OTYgMjcuMTY4M0MyNS4yNDM2IDI3LjAyMjYgMjQuOTMxNiAyNi44MjgzIDI0LjY0MzYgMjYuNjA5OEMyMy44OTk2IDI2LjAyNzEgMjMuNTg3NiAyNS4yNTAyIDIzLjYxMTYgMjQuMzAzM0MyMy42NTk2IDIyLjcyNTIgMjQuNTcxNiAyMS42MDgzIDI2LjE3OTYgMjEuMjE5OEMyNi45NzE2IDIxLjAyNTYgMjcuNzg3NiAyMS4wMjU2IDI4LjYwMzYgMjEuMTQ3QzI5LjA4MzYgMjEuMjE5OCAyOS41NjM2IDIxLjI5MjcgMzAuMDY3NiAyMS4zODk4QzMwLjA2NzYgMjIuMTY2NyAzMC4wNjc2IDIyLjg5NTEgMzAuMDY3NiAyMy42NDc4QzI5LjczMTYgMjMuNTc0OSAyOS4zOTU2IDIzLjUwMjEgMjkuMDU5NiAyMy40NTM1QzI4LjQ1OTYgMjMuMzU2NCAyNy44NTk2IDIzLjI4MzYgMjcuMjM1NiAyMy40MjkzQzI3LjA2NzYgMjMuNDc3OCAyNi44NzU2IDIzLjU1MDcgMjYuNzMxNiAyMy42NDc4QzI2LjMyMzYgMjMuOTE0OCAyNi4yNzU2IDI0LjQ0OSAyNi42NTk2IDI0Ljc2NDZDMjYuODUxNiAyNC45MTAzIDI3LjA2NzYgMjUuMDMxNyAyNy4zMDc2IDI1LjEyODhDMjcuNzE1NiAyNS4yOTg4IDI4LjE0NzYgMjUuMzk1OSAyOC41Nzk2IDI1LjU2NThDMjkuMjAzNiAyNS43ODQzIDI5Ljc1NTYgMjYuMTI0MiAzMC4xNjM2IDI2LjY1ODRDMzAuODExNiAyNy40MzUzIDMwLjkzMTYgMjguMzU3OSAzMC43Mzk2IDI5LjMyOTFDMzAuNDk5NiAzMC40OTQ1IDI5Ljc1NTYgMzEuMjIyOSAyOC42OTk2IDMxLjY1OTlDMjguMTQ3NiAzMS44Nzg0IDI3LjU5NTYgMzEuOTk5OCAyNi45OTU2IDMyLjA0ODRDMjYuOTQ3NiAzMi4wNDg0IDI2Ljg5OTYgMzIuMDcyNyAyNi44Mjc2IDMyLjA3MjdDMjYuNTYzNiAzMS45OTk4IDI2LjMyMzYgMzEuOTk5OCAyNi4wODM2IDMxLjk5OThaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTExLjEzMTMgMzJDMTAuODQzMyAzMS45NTE0IDEwLjUzMTMgMzEuOTI3MiAxMC4yNDMzIDMxLjg3ODZDOC40NjczMSAzMS41MTQ0IDcuMTIzMzEgMzAuNTY3NSA2LjM1NTMxIDI4Ljg2OEM1LjQ0MzMxIDI2LjgwNDIgNS43NTUzMSAyMy45MzkzIDcuODE5MzEgMjIuMjg4M0M4LjY1OTMxIDIxLjYwODUgOS41OTUzMSAyMS4yNDQzIDEwLjY1MTMgMjEuMTIyOUMxMS42ODMzIDIxLjAwMTUgMTIuNjY3MyAyMS4xMjI5IDEzLjY3NTMgMjEuNDE0M0MxMy43OTUzIDIxLjQzODUgMTMuODQzMyAyMS40ODcxIDEzLjg0MzMgMjEuNjMyOEMxMy44NDMzIDIyLjUwNjggMTMuODQzMyAyMy40MDUxIDEzLjg0MzMgMjQuMzAzNUMxMy43NzEzIDI0LjI3OTIgMTMuNzIzMyAyNC4yNTQ5IDEzLjY3NTMgMjQuMjMwNkMxMi44MTEzIDIzLjgxNzkgMTEuOTIzMyAyMy42NDc5IDEwLjk4NzMgMjMuODE3OUM5LjU3MTMxIDI0LjA4NSA4LjYzNTMxIDI1LjM5NiA4Ljc3OTMxIDI2Ljg1MjhDOC45MjMzMSAyOC4yNjEgOS45NzkzMSAyOS4zNTM2IDExLjU2MzMgMjkuMzc3OEMxMi4zMzEzIDI5LjQwMjEgMTMuMDUxMyAyOS4yMzIyIDEzLjc0NzMgMjguODkyM0MxMy43NzEzIDI4Ljg2OCAxMy44MTkzIDI4Ljg2OCAxMy44NjczIDI4Ljg0MzdDMTMuODY3MyAyOC44OTIzIDEzLjg2NzMgMjguOTQwOCAxMy44NjczIDI4Ljk2NTFDMTMuODY3MyAyOS44MTQ5IDEzLjg2NzMgMzAuNjY0NiAxMy44NjczIDMxLjUxNDRDMTMuODY3MyAzMS42MzU4IDEzLjgxOTMgMzEuNjYwMSAxMy43MjMzIDMxLjcwODZDMTMuMTIzMyAzMS44Nzg2IDEyLjU0NzMgMzIgMTEuOTIzMyAzMi4wMjQzQzExLjg3NTMgMzIuMDI0MyAxMS44MjczIDMyLjA0ODUgMTEuNzc5MyAzMi4wNDg1QzExLjU2MzMgMzIgMTEuMzQ3MyAzMiAxMS4xMzEzIDMyWiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik0zOC42MzU3IDMyLjAwMDJDMzguMzQ3NyAzMS45NTE2IDM4LjAzNTcgMzEuOTI3NCAzNy43NDc3IDMxLjg3ODhDMzYuMDkxNyAzMS41Mzg5IDM0Ljc5NTcgMzAuNjY0OCAzMy45Nzk3IDI5LjEzNTJDMzMuNDc1NyAyOC4xNjQxIDMzLjMwNzcgMjcuMTIwMSAzMy40MDM3IDI2LjA1MThDMzMuNDk5NyAyNC43NjUgMzMuOTc5NyAyMy42NDgxIDM0Ljg2NzcgMjIuNzI1NUMzNS43MDc3IDIxLjg3NTggMzYuNzE1NyAyMS4zNjU5IDM3Ljg5MTcgMjEuMTcxN0MzOS4wMTk3IDIwLjk3NzQgNDAuMTIzNyAyMS4wOTg4IDQxLjIyNzcgMjEuNDE0NUM0MS4yOTk3IDIxLjQzODcgNDEuMzQ3NyAyMS40NjMgNDEuMzQ3NyAyMS41NjAxQzQxLjM0NzcgMjIuNDM0MiA0MS4zNDc3IDIzLjMzMjUgNDEuMzQ3NyAyNC4yMDY2QzQxLjM0NzcgMjQuMjMwOCA0MS4zNDc3IDI0LjIzMDggNDEuMzQ3NyAyNC4yNTUxQzQxLjE1NTcgMjQuMTgyMyA0MC45NjM3IDI0LjA4NTIgNDAuNzcxNyAyNC4wMTIzQzM5LjkwNzcgMjMuNzIxIDM5LjA0MzcgMjMuNTk5NiAzOC4xNTU3IDIzLjg2NjdDMzYuOTMxNyAyNC4yMzA4IDM2LjE2MzcgMjUuMzk2MiAzNi4yNTk3IDI2LjY1ODhDMzYuMzU1NyAyOC4yMzY5IDM3LjQ4MzcgMjkuMzA1MiAzOS4wNDM3IDI5LjMyOTVDMzkuODExNyAyOS4zMjk1IDQwLjUzMTcgMjkuMTgzOCA0MS4yMjc3IDI4Ljg0MzlDNDEuMjUxNyAyOC44MTk2IDQxLjI5OTcgMjguODE5NiA0MS4zNDc3IDI4Ljc5NTNDNDEuMzQ3NyAyOS43NDIyIDQxLjM0NzcgMzAuNjY0OCA0MS4zNDc3IDMxLjYzNkM0MC45ODc3IDMxLjcwODggNDAuNjI3NyAzMS44MDYgNDAuMjY3NyAzMS44Nzg4QzM5LjkzMTcgMzEuOTI3NCAzOS42MTk3IDMxLjk1MTYgMzkuMjgzNyAzMi4wMDAyQzM5LjAxOTcgMzIuMDAwMiAzOC44Mjc3IDMyLjAwMDIgMzguNjM1NyAzMi4wMDAyWiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik0xNy40NjggOC4zMjgyNkMxNy40NjggMTAuNjM0OCAxNy40NjggMTIuOTQxMyAxNy40NjggMTUuMjcyMUMxNy40NjggMTUuOTc2MiAxNy4wNiAxNi40ODYxIDE2LjQzNiAxNi42MzE4QzE1LjY2OCAxNi44MDE3IDE0LjkgMTYuMTk0NyAxNC44NzYgMTUuMzkzNUMxNC44NzYgMTUuMzY5MiAxNC44NzYgMTUuMzIwNyAxNC44NzYgMTUuMjk2NEMxNC44NzYgMTAuNjU5MSAxNC44NzYgNi4wMjE3NCAxNC44NzYgMS4zODQ0MUMxNC44NzYgMC44NzQ1NDIgMTUuMDY4IDAuNDg2MDc1IDE1LjUgMC4yMTkwMDNDMTYuMzQgLTAuMzE1MTM5IDE3LjQ2OCAwLjI5MTg0MSAxNy40OTIgMS4yODcyOUMxNy41MTYgMi4zNTU1NyAxNy40OTIgMy40NDgxNCAxNy40OTIgNC41MTY0MkMxNy40NjggNS43Nzg5NCAxNy40NjggNy4wNDE0NiAxNy40NjggOC4zMjgyNloiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOSIvPgo8cGF0aCBkPSJNNDYuMTQ3MiA4LjMyNzc5QzQ2LjE0NzIgMTAuNjM0MyA0Ni4xNDcyIDEyLjkxNjYgNDYuMTQ3MiAxNS4yMjMxQzQ2LjE0NzIgMTUuNzU3MiA0NS45NTUyIDE2LjE5NDMgNDUuNDc1MiAxNi40NjEzQzQ0LjYzNTIgMTYuOTQ2OSA0My42MDMzIDE2LjM2NDIgNDMuNTMxMiAxNS4zNDQ1QzQzLjUzMTIgMTUuMjk1OSA0My41MzEyIDE1LjI0NzQgNDMuNTMxMiAxNS4xOTg4QzQzLjUzMTIgMTAuNTg1OCA0My41MzEyIDUuOTcyNzEgNDMuNTMxMiAxLjM4Mzk0QzQzLjUzMTIgMC43MjgzOTggNDMuODY3MiAwLjI0MjgxNCA0NC40MTkyIDAuMDQ4NTgwNkM0NS4yMTEyIC0wLjI0Mjc3IDQ2LjA3NTMgMC4zMzk5MzEgNDYuMTIzMyAxLjE4OTdDNDYuMTIzMyAxLjI4NjgyIDQ2LjEyMzMgMS4zODM5NCA0Ni4xMjMzIDEuNDgxMDVDNDYuMTQ3MyAzLjc2MzMgNDYuMTQ3MiA2LjA0NTU0IDQ2LjE0NzIgOC4zMjc3OVoiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOSIvPgo8cGF0aCBkPSJNMjAuMDgzOCAzMS44MDU3QzE5LjE5NTggMzEuODA1NyAxOC4zNTU4IDMxLjgwNTcgMTcuNDY3OCAzMS44MDU3QzE3LjQ2NzggMjguMjg1MiAxNy40Njc4IDI0Ljc4OSAxNy40Njc4IDIxLjI2ODZDMTguMzMxOCAyMS4yNjg2IDE5LjE5NTggMjEuMjY4NiAyMC4wODM4IDIxLjI2ODZDMjAuMDgzOCAyNC43NjQ4IDIwLjA4MzggMjguMjg1MiAyMC4wODM4IDMxLjgwNTdaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTUzLjMyNCA5LjQ5MjkxQzUzLjMyNCAxMC41NjEyIDUzLjMyNCAxMS42Mjk1IDUzLjMyNCAxMi43MjJDNTMuMzI0IDEzLjIzMTkgNTMuMDg0IDEzLjYyMDQgNTIuNjUyIDEzLjg2MzJDNTIuMjIgMTQuMTA2IDUxLjc2NCAxNC4xMDYgNTEuMzMyIDEzLjgzODlDNTAuOTI0IDEzLjU3MTggNTAuNzA4IDEzLjE4MzQgNTAuNzA4IDEyLjY5NzhDNTAuNzA4IDEwLjU4NTUgNTAuNzA4IDguNDQ4OSA1MC43MDggNi4zMzY2MUM1MC43MDggNS42NTY4IDUxLjE4OCA1LjA5ODM3IDUxLjgxMiA1LjAyNTU0QzUyLjQ4NCA0LjkyODQyIDUzLjA4NCA1LjMxNjg5IDUzLjI1MiA1Ljk3MjQzQzUzLjMgNi4xMTgxIDUzLjMgNi4yNjM3OCA1My4zIDYuNDA5NDVDNTMuMzQ4IDcuNDA0OSA1My4zMjQgOC40NDg5IDUzLjMyNCA5LjQ5MjkxWiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik0xMC4yOTEyIDkuNDkzMTNDMTAuMjkxMiAxMC41MzcxIDEwLjI5MTIgMTEuNTgxMSAxMC4yOTEyIDEyLjYyNTJDMTAuMjkxMiAxMy4yODA3IDkuODgzMjIgMTMuODE0OCA5LjMwNzIyIDEzLjk2MDVDOC40OTEyMiAxNC4xNTQ3IDcuNzIzMjIgMTMuNTQ3OCA3LjY5OTIyIDEyLjY5OEM3LjY5OTIyIDEyLjM4MjQgNy42OTkyMiAxMi4wNjY3IDcuNjk5MjIgMTEuNzI2OEM3LjY5OTIyIDkuOTMwMTYgNy42OTkyMiA4LjEzMzUgNy42OTkyMiA2LjMzNjg0QzcuNjk5MjIgNS42ODEzIDguMDgzMjIgNS4xNzE0NCA4LjY1OTIyIDUuMDAxNDhDOS41MjMyMiA0Ljc1ODY5IDEwLjMxNTIgNS4zODk5NSAxMC4zMTUyIDYuMzEyNTZDMTAuMjkxMiA3LjQwNTEyIDEwLjI5MTIgOC40NDkxMyAxMC4yOTEyIDkuNDkzMTNaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTI0LjY0MzMgOS40OTMzNUMyNC42NDMzIDEwLjUzNzQgMjQuNjQzMyAxMS42MDU2IDI0LjY0MzMgMTIuNjQ5NkMyNC42NDMzIDEzLjI4MDkgMjQuMjM1MyAxMy44MTUgMjMuNjU5MyAxMy45NjA3QzIyLjgxOTMgMTQuMTU1IDIyLjA1MTMgMTMuNTQ4IDIyLjAyNzMgMTIuNjQ5NkMyMi4wMjczIDExLjk2OTggMjIuMDI3MyAxMS4yOSAyMi4wMjczIDEwLjYxMDJDMjIuMDI3MyA5LjIwMiAyMi4wMjczIDcuNzY5NTIgMjIuMDI3MyA2LjM2MTMzQzIyLjAyNzMgNS43MDU3OSAyMi40MTEzIDUuMTk1OTMgMjIuOTg3MyA1LjAyNTk3QzIzLjgyNzMgNC43ODMxOCAyNC42NDMzIDUuNDE0NDQgMjQuNjQzMyA2LjMxMjc3QzI0LjY0MzMgNy4zODEwNSAyNC42NDMzIDguNDI1MDYgMjQuNjQzMyA5LjQ5MzM1WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik0zNi4zNzk5IDkuNDkyNzVDMzYuMzc5OSA4LjQ0ODc1IDM2LjM3OTkgNy40MDQ3NCAzNi4zNzk5IDYuMzYwNzRDMzYuMzc5OSA1LjcwNTIgMzYuNzM5OSA1LjE5NTMzIDM3LjMxNTkgNS4wMjUzOEMzOC4xNTU5IDQuNzgyNTkgMzguOTcxOSA1LjM4OTU3IDM4Ljk5NTkgNi4zMTIxOEMzOC45OTU5IDYuODQ2MzIgMzguOTk1OSA3LjM1NjE4IDM4Ljk5NTkgNy44OTAzM0MzOC45OTU5IDkuNDY4NDcgMzguOTk1OSAxMS4wNzA5IDM4Ljk5NTkgMTIuNjQ5MUMzOC45OTU5IDEzLjMyODkgMzguNTYzOSAxMy44NjMgMzcuOTM5OSAxNC4wMDg3QzM3LjE5NTkgMTQuMTU0NCAzNi40Mjc5IDEzLjU5NTkgMzYuNDAzOSAxMi44MTlDMzYuMzc5OSAxMi4wOTA2IDM2LjQwMzkgMTEuMzYyMyAzNi4zNzk5IDEwLjYwOTZDMzYuMzc5OSAxMC4yNDU0IDM2LjM3OTkgOS44NTY5NCAzNi4zNzk5IDkuNDkyNzVaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTAuNDk5NTg2IDExLjMxNDJDMC40OTk1ODYgMTAuODUyOSAwLjQ5OTU4NiAxMC4zNjczIDAuNDk5NTg2IDkuOTA2MDJDMC40OTk1ODYgOS4zNzE4OCAwLjgzNTU4NiA4LjkxMDU4IDEuMzM5NTkgOC43MTYzNEMxLjg0MzU5IDguNTIyMTEgMi4zOTU1OSA4LjY0MzUgMi43NTU1OSA5LjA1NjI1QzIuOTcxNTkgOS4yOTkwNCAzLjA5MTU5IDkuNTkwMzkgMy4wOTE1OSA5LjkwNjAyQzMuMDkxNTkgMTAuODUyOSAzLjA5MTU5IDExLjc5OTggMy4wOTE1OSAxMi43NDY3QzMuMDkxNTkgMTMuNDUwOCAyLjUxNTU5IDE0LjAzMzUgMS43OTU1OSAxNC4wMzM1QzEuMDc1NTkgMTQuMDMzNSAwLjQ5OTU4NiAxMy40NzUxIDAuNDc1NTg2IDEyLjc3MUMwLjQ5OTU4NiAxMi4yNjExIDAuNDk5NTg2IDExLjc5OTggMC40OTk1ODYgMTEuMzE0MloiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOSIvPgo8cGF0aCBkPSJNNjAuNDk5MiAxMS4yODk3QzYwLjQ5OTIgMTEuNzc1MyA2MC40OTkyIDEyLjIzNjYgNjAuNDk5MiAxMi43MjIyQzYwLjQ5OTIgMTMuMjgwNiA2MC4xMzkyIDEzLjc2NjIgNTkuNjExMiAxMy45MzYyQzU5LjA4MzIgMTQuMTA2MSA1OC41MzEyIDEzLjkzNjIgNTguMTk1MiAxMy40OTkxQzU4LjAwMzIgMTMuMjgwNiA1Ny45MDcyIDEzLjAxMzUgNTcuOTA3MiAxMi43MjIyQzU3LjkwNzIgMTEuNzc1MyA1Ny45MDcyIDEwLjgyODQgNTcuOTA3MiA5Ljg4MTUyQzU3LjkwNzIgOS4xNzc0MyA1OC41MDcyIDguNTk0NzMgNTkuMjAzMiA4LjU5NDczQzU5Ljg5OTIgOC41OTQ3MyA2MC40NzUyIDkuMTUzMTUgNjAuNDk5MiA5Ljg1NzI0QzYwLjQ5OTIgMTAuMzQyOCA2MC40OTkyIDEwLjgyODQgNjAuNDk5MiAxMS4yODk3WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik0yOS4yMDM3IDExLjI5MDFDMjkuMjAzNyAxMC44Mjg4IDI5LjIwMzcgMTAuMzkxOCAyOS4yMDM3IDkuOTMwNUMyOS4yMDM3IDkuMjAyMTIgMjkuNzA3NyA4LjY2Nzk4IDMwLjQyNzcgOC41OTUxNEMzMS4wNzU3IDguNTQ2NTggMzEuNjc1NyA5LjAzMjE3IDMxLjc3MTcgOS43MTE5OEMzMS43NzE3IDkuNzg0ODIgMzEuNzk1NyA5LjgzMzM4IDMxLjc5NTcgOS45MDYyMkMzMS43OTU3IDEwLjgyODggMzEuNzk1NyAxMS43NTE0IDMxLjc5NTcgMTIuNjc0QzMxLjc5NTcgMTMuMTgzOSAzMS41NTU3IDEzLjU5NjcgMzEuMDk5NyAxMy44Mzk0QzMwLjY0MzcgMTQuMDgyMiAzMC4yMTE3IDE0LjA1OCAyOS43Nzk3IDEzLjc2NjZDMjkuMzk1NyAxMy41MjM4IDI5LjIwMzcgMTMuMTU5NiAyOS4xNzk3IDEyLjY5ODNDMjkuMjAzNyAxMi4yNjEzIDI5LjIwMzcgMTEuNzc1NyAyOS4yMDM3IDExLjI5MDFaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF82NTAxXzgxNTMiPgo8cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iMzIiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjUpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==" alt="Cisco" class="trust-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCA2NiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY1MDFfODEwMSkiPgo8cGF0aCBkPSJNNDUuNzEyNSAtMC4wMDAzNTA5MjhDNDUuODk1MiAwLjAyNTY2NTMgNDYuMDc4IDAuMDUxNjgxNiA0Ni4yNjA3IDAuMDc3Njk3OUM0Ny44NzkyIDAuMjU5ODEyIDQ4LjcxNDUgMS4zMDA0NiA0OC44NDUgMi43NTczN0M0OC44OTcyIDMuMzU1NzUgNDguODQ1IDMuOTU0MTIgNDguODQ1IDQuNTUyNDlDMzguMTQyMiA0LjU1MjQ5IDI3LjQ2NTUgNC41NTI0OSAxNi43NjI3IDQuNTUyNDlDMTYuODY3MSAzLjQwNzc4IDE2Ljk5NzYgMi4zMTUxIDE3Ljc1NDcgMS4zNzg1MUMxOC4zMjkgMC43MDIwODggMTkuMDMzOCAwLjI1OTgxMiAxOS45MjEzIDAuMDc3Njk3OUMyMC4wMjU3IDAuMDUxNjgxNiAyMC4xMzAyIC0wLjAwMDM1MDkyOCAyMC4yMDg1IC0wLjAyNjM2NzJDMjguNjkyNCAtMC4wMDAzNTA5MjggMzcuMjAyNSAtMC4wMDAzNTA5MjggNDUuNzEyNSAtMC4wMDAzNTA5MjhaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTY1LjUwMDMgMy40ODYxOEM2NS40NDgxIDMuNzk4MzcgNjUuMzk1OSA0LjA4NDU1IDY1LjM2OTggNC4zOTY3NUM2NS4zNDM3IDQuNTc4ODYgNjUuMjY1NCA0LjYzMDg5IDY1LjA4MjYgNC42MzA4OUM2My4zNTk4IDQuNjMwODkgNjEuNjM2OSA0LjYzMDg5IDU5Ljk0MDEgNC42MzA4OUM1Ni41NzI2IDQuNjMwODkgNTMuMjMxMiA0LjYzMDg5IDQ5Ljg2MzggNC42MzA4OUM0OS43NTk0IDQuNjMwODkgNDkuNjU0OSA0LjYzMDg5IDQ5LjUyNDQgNC42MzA4OUM0OS42MDI3IDQuMTEwNTcgNDkuNjU0OSAzLjY0MjI4IDQ5LjczMzMgMy4xNDc5N0M0OS44NjM4IDIuMTA3MzIgNTAuMDIwNCAxLjA0MDY1IDUwLjE1MDkgMEM1NC4zMDE1IDAgNTguNDUyMSAwIDYyLjYwMjcgMEM2Mi43NTk0IDAuMDI2MDE2MyA2Mi45MTYgMC4wNzgwNDg4IDYzLjA5ODcgMC4xMDQwNjVDNjQuMzUxNyAwLjI4NjE3OSA2NS4xODcxIDEuMDY2NjcgNjUuNDQ4MSAyLjI4OTQzQzY1LjQ3NDIgMi4zNjc0OCA2NS41MDAzIDIuNDcxNTQgNjUuNTI2NCAyLjU0OTU5QzY1LjUwMDMgMi44NjE3OSA2NS41MDAzIDMuMTczOTggNjUuNTAwMyAzLjQ4NjE4WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik0xNi41MDIxIDBDMTYuNDIzOCAwLjU5ODM3NCAxNi4zNzE2IDEuMTk2NzUgMTYuMjkzMiAxLjc5NTEyQzE2LjE4ODggMi42Nzk2NyAxNi4wNTgzIDMuNTY0MjMgMTUuOTUzOSA0LjQ3NDhDMTUuOTUzOSA0LjUwMDgxIDE1LjkyNzggNC41MjY4MyAxNS45Mjc4IDQuNTc4ODZDMTEuMjgxMiA0LjU3ODg2IDYuNjM0NiA0LjU3ODg2IDEuOTYxOTEgNC41Nzg4NkMyLjE3MDc1IDMuMDQzOSAyLjM1MzQ4IDEuNTA4OTQgMi41MzYyMSAwQzcuMjA4OSAwIDExLjg1NTUgMCAxNi41MDIxIDBaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTE1LjQ1OCAxNS45OTk4QzE1LjY2NjggMTQuNTY4OSAxNS45MDE4IDEzLjE5MDEgMTYuMTEwNiAxMS43NTkyQzE5LjU4MjUgMTEuNzU5MiAyMy4wNTQ0IDExLjc1OTIgMjYuNTI2MyAxMS43NTkyQzI2LjYwNDYgMTEuMTYwOCAyNi42NTY4IDEwLjU2MjQgMjYuNzM1MSA5Ljk2NDAzQzI2LjYzMDcgOS45NjQwMyAyNi41MjYzIDkuOTY0MDMgMjYuNDIxOSA5Ljk2NDAzQzI0LjA0NjQgOS45NjQwMyAyMS42OTcgOS45NjQwMyAxOS4zMjE1IDkuOTY0MDNDMTguMzI5NSA5Ljk2NDAzIDE2Ljg5MzggOS4zMzk2NSAxNi42MzI3IDguMDkwODZDMTYuNTI4MyA3LjU3MDU0IDE2LjUyODMgNi45OTgxOCAxNi41MDIyIDYuNDUxODRDMTYuNTAyMiA2LjM5OTgxIDE2LjYwNjYgNi4zNDc3NyAxNi42NTg4IDYuMjk1NzRDMTYuNzExIDYuMjY5NzMgMTYuNzYzMiA2LjI5NTc0IDE2Ljg0MTUgNi4yOTU3NEMyMC45Mzk5IDYuMjk1NzQgMjUuMDY0NCA2LjI5NTc0IDI5LjE2MjggNi4yOTU3NEMyOS41MDIyIDYuMjk1NzQgMjkuODY3NiA2LjMyMTc2IDMwLjIwNyA2LjM0Nzc3QzMxLjQzMzkgNi40NTE4NCAzMS45NTYgNy4zMzYzOSAzMi4wMzQzIDguMjIwOTVDMzIuMDg2NSA4Ljc5MzMgMzIuMDM0MyA5LjM5MTY4IDMxLjk4MjEgOS45OTAwNUMzMS44Nzc3IDEwLjk1MjcgMzEuNzczMyAxMS45MTUzIDMxLjU5MDUgMTIuODc3OUMzMS4yNTEyIDE0LjYyMDkgMzAuMDUwNCAxNS43Mzk2IDI4LjI0OTIgMTUuOTIxOEMyNy42MjI3IDE1Ljk5OTggMjYuOTcwMSAxNS45NzM4IDI2LjM0MzYgMTUuOTczOEMyMi44MTk1IDE1Ljk3MzggMTkuMzIxNSAxNS45NzM4IDE1Ljc5NzQgMTUuOTczOEMxNS42OTI5IDE1Ljk5OTggMTUuNTg4NSAxNS45OTk4IDE1LjQ1OCAxNS45OTk4WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxwYXRoIGQ9Ik02LjUzMDEyIDkuOTY0MTlDNi40NTE4MSAxMC41NjI2IDYuMzczNDkgMTEuMTM0OSA2LjI5NTE4IDExLjc1OTNDOS4yMTg4OCAxMS43NTkzIDEyLjExNjUgMTEuNzU5MyAxNS4wNjYzIDExLjc1OTNDMTUuMDE0MSAxMi4yNzk2IDE0LjkzNTcgMTIuNzQ3OSAxNC44ODM1IDEzLjIxNjJDMTQuNzc5MSAxNC4wNzQ4IDE0LjY0ODYgMTQuOTMzMyAxNC41NDQyIDE1Ljc5MThDMTQuNTE4MSAxNS45NDc5IDE0LjQ2NTkgMTYgMTQuMzA5MiAxNkM5Ljc2NzA3IDE2IDUuMjUxIDE2IDAuNzA4ODM1IDE2QzAuNjU2NjI3IDE2IDAuNTc4MzEzIDE2IDAuNSAxNS45NzM5QzAuOTE3NjcxIDEyLjc0NzkgMS4zMDkyNCA5LjUyMTkxIDEuNzI2OTEgNi4yOTU5QzYuMzk5NiA2LjI5NTkgMTEuMDQ2MiA2LjI5NTkgMTUuNzE4OSA2LjI5NTlDMTUuNTg4NCA3LjUxODY2IDE1LjQzMTcgOC43NDE0MyAxNS4zMDEyIDkuOTY0MTlDMTIuMzc3NSA5Ljk2NDE5IDkuNDc5OTIgOS45NjQxOSA2LjUzMDEyIDkuOTY0MTlaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTQ4LjQ3OTggNi4zMjEyOUM0OC40MDE1IDcuMDQ5NzQgNDguMzQ5MyA3Ljc1MjE4IDQ4LjA2MjEgOC40MDI1OUM0Ny42NzA1IDkuMzEzMTYgNDYuOTkxOCA5Ljg1OTUgNDUuOTczNyA5LjkzNzU1QzQ1LjUwMzkgOS45NjM1NyA0NS4wMzQgMTAuMDE1NiA0NC41OTAyIDEwLjAxNTZDNDIuNTI4IDEwLjAxNTYgNDAuNDM5NiAxMC4wMTU2IDM4LjM3NzQgMTAuMDE1NkMzOC4xNDI0IDEwLjAxNTYgMzguMDkwMiAxMC4wOTM2IDM4LjA2NDEgMTAuMzAxOEMzNy44NTUzIDEyLjE0ODkgMzcuNjQ2NCAxMy45NzAxIDM3LjQzNzYgMTUuODE3MkMzNy40Mzc2IDE1Ljg2OTMgMzcuNDExNSAxNS45MjEzIDM3LjQxMTUgMTUuOTk5M0MzNS42NjI1IDE1Ljk5OTMgMzMuODg3NCAxNS45OTkzIDMyLjExMjMgMTUuOTk5M0MzMi4xNjQ1IDE1LjUwNSAzMi4yNDI4IDE1LjAxMDcgMzIuMjk1IDE0LjU0MjRDMzIuNTgyMiAxMi4xNzQ5IDMyLjg2OTMgOS44MDc0NyAzMy4xODI2IDcuNDEzOTdDMzMuMjA4NyA3LjEyNzc5IDMzLjI2MDkgNi44NDE2MSAzMy4yODcgNi41NTU0NEMzMy4yODcgNi4zNzMzMiAzMy4zNjUzIDYuMzQ3MzEgMzMuNTQ4IDYuMzQ3MzFDMzQuMjUyOSA2LjM0NzMxIDM0Ljk1NzcgNi4zNDczMSAzNS42NjI1IDYuMzQ3MzFDMzkuODM5MiA2LjM0NzMxIDQ0LjAxNTkgNi4zNDczMSA0OC4xOTI2IDYuMzQ3MzFDNDguMjcwOSA2LjMyMTI5IDQ4LjM3NTQgNi4zMjEyOSA0OC40Nzk4IDYuMzIxMjlaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPHBhdGggZD0iTTQ4LjE2NyAxNS45NzMzQzQ4LjU1ODYgMTIuNzQ3MyA0OC45MjQgOS41NDczMSA0OS4zMTU2IDYuMzIxMjlDNTEuMDY0NiA2LjMyMTI5IDUyLjc4NzUgNi4zMjEyOSA1NC41MzY1IDYuMzIxMjlDNTQuNDg0MyA2Ljc4OTU4IDU0LjQzMiA3LjIzMTg2IDU0LjM3OTggNy42NzQxM0M1NC4wOTI3IDkuOTExNTMgNTMuODMxNiAxMi4xNzQ5IDUzLjU0NDUgMTQuNDEyM0M1My40OTIzIDE0Ljg1NDYgNTMuNDQwMSAxNS4zMjI5IDUzLjM4NzkgMTUuNzY1MkM1My4zNjE4IDE1Ljg5NTMgNTMuMzM1NyAxNS45NzMzIDUzLjE3OSAxNS45NzMzQzUxLjUzNDUgMTUuOTczMyA0OS45MTYgMTUuOTczMyA0OC4yNzE0IDE1Ljk3MzNDNDguMjcxNCAxNS45OTkzIDQ4LjI0NTMgMTUuOTczMyA0OC4xNjcgMTUuOTczM1oiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOSIvPgo8cGF0aCBkPSJNNjUuMDI5NiA2LjM0NzkzQzY0Ljk1MTMgNi45OTgzNCA2NC44NzMgNy42MjI3MyA2NC43OTQ3IDguMjQ3MTJDNjQuNTA3NSAxMC40NTg1IDY0LjI0NjUgMTIuNjk1OSA2My45NTk0IDE0LjkwNzNDNjMuOTMzMiAxNS4xOTM1IDYzLjkwNzEgMTUuNTA1NyA2My44NTQ5IDE1Ljc5MThDNjMuODU0OSAxNS44Njk5IDYzLjc1MDUgMTUuOTQ3OSA2My42NzIyIDE1Ljk0NzlDNjIuMDI3NiAxNS45NDc5IDYwLjQwOTIgMTUuOTQ3OSA1OC43NjQ2IDE1Ljk0NzlDNTguNzM4NSAxNS45NDc5IDU4LjcxMjQgMTUuOTIxOSA1OC42NjAyIDE1LjkyMTlDNTguNzM4NSAxNS4zNDk2IDU4Ljc5MDcgMTQuNzUxMiA1OC44NjkgMTQuMTc4OEM1OS4xODIyIDExLjYyOTIgNTkuNDk1NSA5LjEwNTY1IDU5Ljc4MjYgNi41NTYwNkM1OS44MDg4IDYuMzk5OTYgNTkuODA4NyA2LjI5NTkgNjAuMDE3NiA2LjI5NTlDNjEuNjM2MSA2LjI5NTkgNjMuMjI4NCA2LjI5NTkgNjQuODQ2OSA2LjI5NTlDNjQuODk5MSA2LjM0NzkzIDY0Ljk1MTMgNi4zNDc5MyA2NS4wMjk2IDYuMzQ3OTNaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF82NTAxXzgxMDEiPgo8cmVjdCB3aWR0aD0iNjUiIGhlaWdodD0iMTYiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjUpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==" alt="ESPN" class="trust-logo">
+                <img src="data:image/png;base64,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" alt="NBA" class="trust-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCA3NiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY1MDFfODI0MSkiPgo8cGF0aCBkPSJNOC40OTIyOCAxMS45OTI3VjE2SDAuNVYwSDQuNDk2MTRWMTEuOTkyN0g4LjQ5MjI4Wk05LjI3NDEzIDBWMTZIMTMuMjcwM1YwSDkuMjc0MTNaTTIyLjA0NDQgNC4wMDcyNlYwSDE0LjA1MjFWMTZIMTguMDQ4M1Y5LjYxMTYySDIxLjIzMzZWNi4zODgzOEgxOC4wNDgzVjMuOTc4MjJIMjIuMDQ0NFY0LjAwNzI2Wk0zMC44MTg1IDQuMDA3MjZWMEgyMi44MjYzVjE2SDMwLjgxODVWMTEuOTkyN0gyNi44MjI0VjkuNTgyNThIMzAuMDA3N1Y2LjM4ODM4SDI2LjgyMjRWMy45NzgyMkgzMC44MTg1VjQuMDA3MjZaTTcwLjcyMiA0LjAwNzI2VjBINjIuNzI5N1YxNkg3MC43MjJWMTEuOTkyN0g2Ni43MjU5VjkuNTgyNThINjkuOTExMlY2LjM4ODM4SDY2LjcyNTlWMy45NzgyMkg3MC43MjJWNC4wMDcyNlpNMzMuMjIyIDBWNC4wMDcyNkgzNS42MjU1VjE2SDM5LjU5MjdWNC4wMDcyNkg0MS45OTYxVjBIMzMuMjIyWk00Mi43NzggMFYxNkg0Ni43NzQxVjBINDIuNzc4Wk01Ny45NTE3IDBINTUuOTUzN0w1NC43NjY0IDguMDE0NTJMNTMuNTUwMiAwSDUxLjU1MjFINDcuNTU2VjE2SDUxLjU1MjFWNy4yMDE0NUw1My4xNDQ4IDE2SDU2LjMzMDFMNTcuOTIyOCA3LjIwMTQ1VjE2SDYxLjkxODlWMEg1Ny45NTE3Wk03My41MDE5IDBDNzIuMzcyNiAwIDcxLjUwMzkgMC44NzExNDMgNzEuNTAzOSAyLjAwMzYzQzcxLjUwMzkgMy4xMzYxMiA3Mi4zNzI2IDQuMDA3MjYgNzMuNTAxOSA0LjAwNzI2Qzc0LjYzMTMgNC4wMDcyNiA3NS41IDMuMTM2MTIgNzUuNSAyLjAwMzYzQzc1LjUgMC44NzExNDMgNzQuNjMxMyAwIDczLjUwMTkgMFpNNzMuNTAxOSAzLjY4Nzg0QzcyLjU0NjMgMy42ODc4NCA3MS44MjI0IDIuODc0NzcgNzEuODIyNCAyLjAwMzYzQzcxLjgyMjQgMS4xMzI0OSA3Mi42MzMyIDAuMzE5NDE5IDczLjUwMTkgMC4zMTk0MTlDNzQuMzcwNyAwLjMxOTQxOSA3NS4xODE1IDEuMTMyNDkgNzUuMTgxNSAyLjAwMzYzQzc1LjE4MTUgMi44NzQ3NyA3NC40NTc1IDMuNjg3ODQgNzMuNTAxOSAzLjY4Nzg0Wk03My44MjA1IDIuMTQ4ODJDNzMuOTk0MiAyLjE0ODgyIDc0LjEzOSAyLjA2MTcxIDc0LjIyNTkgMS45NzQ1OUM3NC4zMTI3IDEuODg3NDggNzQuMzk5NiAxLjc0MjI5IDc0LjM5OTYgMS40ODA5NEM3NC4zOTk2IDEuMjE5NiA3NC4zMTI3IDEuMDc0NDEgNzQuMTY3OSAwLjk4NzI5NkM3NC4xNjc5IDAuODEzMDY3IDczLjkzNjMgMC43NTQ5OTEgNzMuNjc1NyAwLjc1NDk5MUg3Mi44MDY5VjMuMTk0MTlINzMuMTI1NVYyLjE0ODgySDczLjUzMDlMNzQuMTY3OSAzLjE5NDE5SDc0LjU3MzRMNzMuODIwNSAyLjE0ODgyWk03My41MDE5IDEuODI5NEg3My4wOTY1VjEuMTMyNDlINzMuNTg4OEM3My42NzU3IDEuMTMyNDkgNzMuNzYyNSAxLjEzMjQ5IDczLjc2MjUgMS4xMzI0OUM3My44NDk0IDEuMTMyNDkgNzMuODQ5NCAxLjEzMjQ5IDczLjkzNjMgMS4yMTk2Qzc0LjAyMzIgMS4yMTk2IDc0LjAyMzIgMS4zMDY3MiA3NC4wMjMyIDEuMzA2NzJDNzQuMDIzMiAxLjM5MzgzIDc0LjExIDEuMzkzODMgNzQuMTEgMS40ODA5NEM3NC4xMSAxLjU2ODA2IDc0LjExIDEuNjU1MTcgNzQuMDIzMiAxLjcxMzI1Qzc0LjAyMzIgMS44MDAzNiA3My45MzYzIDEuODAwMzYgNzMuODQ5NCAxLjgwMDM2QzczLjc2MjUgMS44MDAzNiA3My42NzU3IDEuODg3NDggNzMuNjc1NyAxLjg4NzQ4QzczLjY3NTcgMS44ODc0OCA3My41ODg4IDEuODI5NCA3My41MDE5IDEuODI5NFoiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzY1MDFfODI0MSI+CjxyZWN0IHdpZHRoPSI3NSIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuNSkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K" alt="Life Time" class="trust-logo">
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         PRODUCT TABS
+         ======================================== -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="build">Build</button>
+                <button class="tab-btn" data-tab="connect">Connect</button>
+                <button class="tab-btn" data-tab="govern">Govern</button>
+                <button class="tab-btn" data-tab="monitor">Monitor</button>
+                <button class="tab-btn" data-tab="scale">Scale</button>
+            </div>
+            
+            <div class="tab-content active" id="build">
+                <div class="tab-panel">
+                    <div class="tab-panel-content">
+                        <h3>Build Agents Fast</h3>
+                        <p>Create AI agents in minutes with templates, visual workflows, and flexible LLM options.</p>
+                        <ul class="tab-panel-features">
+                            <li>Pre-built agent templates for common use cases</li>
+                            <li>Visual workflow builder—no coding required</li>
+                            <li>Use DomoGPT, OpenAI, Anthropic, or your own models</li>
+                            <li>Define agent behaviors and guardrails upfront</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel-visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="connect">
+                <div class="tab-panel">
+                    <div class="tab-panel-content">
+                        <h3>Connect to Your Data</h3>
+                        <p>Agents access your governed Domo datasets directly—no custom pipelines or data exports.</p>
+                        <ul class="tab-panel-features">
+                            <li>RAG capabilities with enterprise datasets</li>
+                            <li>1,000+ data connectors available</li>
+                            <li>Real-time data access, not stale exports</li>
+                            <li>Inherit existing data governance policies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel-visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="govern">
+                <div class="tab-panel">
+                    <div class="tab-panel-content">
+                        <h3>Govern Everything</h3>
+                        <p>Enterprise-grade security, compliance, and access controls built into every agent.</p>
+                        <ul class="tab-panel-features">
+                            <li>Role-based access controls (RBAC)</li>
+                            <li>Compliance-ready audit trails</li>
+                            <li>PII detection and data masking</li>
+                            <li>Centralized policy management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel-visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="monitor">
+                <div class="tab-panel">
+                    <div class="tab-panel-content">
+                        <h3>Monitor & Control</h3>
+                        <p>Human-in-the-loop oversight ensures agents work as intended with full transparency.</p>
+                        <ul class="tab-panel-features">
+                            <li>Real-time agent activity dashboards</li>
+                            <li>Approval workflows for critical actions</li>
+                            <li>Complete audit logs and decision trails</li>
+                            <li>Alert on anomalies or policy violations</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel-visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="scale">
+                <div class="tab-panel">
+                    <div class="tab-panel-content">
+                        <h3>Scale with Confidence</h3>
+                        <p>Deploy across the enterprise with orchestration, versioning, and multi-agent coordination.</p>
+                        <ul class="tab-panel-features">
+                            <li>Multi-agent orchestration and handoffs</li>
+                            <li>Version control and rollback capabilities</li>
+                            <li>Enterprise-scale infrastructure</li>
+                            <li>Usage analytics and cost management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel-visual">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FEATURES SECTION
+         ======================================== -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise AI Agents, Governed and Controlled</h2>
+                <p>Agent Catalyst unifies AI agent creation, deployment, and management in a single governed platform. No more tool sprawl. No more shadow AI.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Human-in-the-Loop Control</h3>
+                    <p>Critical decisions always include human oversight. Set guardrails, define approval workflows, and maintain control at every step.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="9" y1="9" x2="15" y2="15"/>
+                            <line x1="15" y1="9" x2="9" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Governed Data Access</h3>
+                    <p>Agents connect directly to your governed Domo datasets. No custom pipelines. No data leakage. Enterprise-grade security built in.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>24/7 Automation</h3>
+                    <p>Agents work around the clock—processing invoices, scheduling, data entry—while you focus on strategic work that moves the business.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Flexible LLM Options</h3>
+                    <p>Use DomoGPT, connect third-party models, or bring your own. Orchestration and governance work with any foundation model.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Pre-Built Templates</h3>
+                    <p>Start fast with expert-built agent templates. Finance, HR, Operations, Customer Service—proven patterns ready to deploy.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Measurable ROI</h3>
+                    <p>Track agent performance, measure time saved, and quantify business impact. Clear metrics prove the value of your AI investment.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         VALUE PROPS SECTION
+         ======================================== -->
+    <section class="value-props">
+        <div class="container">
+            <div class="section-header">
+                <h2>Results That Matter</h2>
+                <p>Agent Catalyst customers see immediate impact across their operations.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-number">80%</div>
+                    <div>
+                        <h3>Reduction in Manual Tasks</h3>
+                        <p>Automate repetitive work like invoice processing, scheduling, and data entry—freeing your team for strategic initiatives.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">24/7</div>
+                    <div>
+                        <h3>Always-On Operations</h3>
+                        <p>AI agents work around the clock, ensuring critical processes never wait for human availability.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">100%</div>
+                    <div>
+                        <h3>Governed & Compliant</h3>
+                        <p>Every agent action is logged, auditable, and connected to your governed data sources. No shadow AI.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">1</div>
+                    <div>
+                        <h3>Unified Platform</h3>
+                        <p>Eliminate AI tool sprawl. One platform for building, deploying, and managing all your enterprise AI agents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         TESTIMONIALS
+         ======================================== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>See how enterprises are transforming with Agent Catalyst</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Agent Catalyst transformed how we handle routine operations. We've automated 80% of our invoice processing while maintaining complete oversight and control. The ROI was clear within the first quarter."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Sarah Chen</h4>
+                            <p>VP of Operations, Fortune 500 Retailer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The governance features are what sold us. Our compliance team finally signed off on AI because everything is auditable, traceable, and controlled. We went from pilot to production in 6 weeks."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Michael Torres</h4>
+                            <p>CIO, Financial Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We tried building our own agent framework. After 8 months and $2M, we switched to Agent Catalyst and had production agents running in 3 weeks. Should have started here."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Jennifer Walsh</h4>
+                            <p>Head of AI, Healthcare Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FAQ SECTION
+         ======================================== -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about Agent Catalyst</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">What is Agent Catalyst?</button>
+                    <div class="faq-answer">
+                        <p>Agent Catalyst is Domo's enterprise AI agent platform that lets you build, deploy, and govern AI agents at scale. It combines agent orchestration with Domo's data governance, giving you the ability to automate complex tasks while maintaining complete control and visibility.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How is this different from ChatGPT or other AI tools?</button>
+                    <div class="faq-answer">
+                        <p>Unlike general-purpose AI chatbots, Agent Catalyst creates purpose-built agents that take action on your behalf—processing data, triggering workflows, and making decisions within guardrails you define. It's integrated with your enterprise data and includes governance, audit trails, and human-in-the-loop controls that consumer AI tools lack.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What LLMs does Agent Catalyst support?</button>
+                    <div class="faq-answer">
+                        <p>Agent Catalyst is model-agnostic. You can use DomoGPT (Domo's built-in model), connect to OpenAI, Anthropic, Google, or other providers, or bring your own fine-tuned models. The orchestration and governance layer works regardless of which LLM powers your agents.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do you handle data security and compliance?</button>
+                    <div class="faq-answer">
+                        <p>Security is built into every layer. Agent Catalyst inherits Domo's enterprise-grade security including SOC 2 Type II, HIPAA, and GDPR compliance. All agent actions are logged, data access follows your existing governance policies, and you can implement PII detection, data masking, and approval workflows for sensitive operations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need technical skills to build agents?</button>
+                    <div class="faq-answer">
+                        <p>No. Agent Catalyst includes a visual workflow builder and pre-built templates that let business users create agents without coding. Technical teams can go deeper with custom configurations, API integrations, and advanced orchestration—but it's not required to get started.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What's the typical time to value?</button>
+                    <div class="faq-answer">
+                        <p>Most customers have their first production agent running within 2-4 weeks. The combination of templates, governed data access, and built-in orchestration eliminates months of infrastructure work. Many see ROI within the first quarter from automating high-volume manual tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         CTA SECTION
+         ======================================== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your AI Strategy?</h2>
+            <p>See how Agent Catalyst can help you build, deploy, and govern AI agents that deliver real business results.</p>
+            <div class="cta-buttons">
+                <a href="https://www.domo.com/form/talk-to-sales" class="btn btn-white">Talk to Sales</a>
+                <a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch Demo</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FOOTER (matches domo.com exactly)
+         ======================================== -->
+    <footer class="domo-footer">
+        <div class="container">
+            <!-- Centered Logo -->
+            <div class="footer-logo">
+                <a href="https://www.domo.com">
+                    <img src="assets/domo-logo-official.svg" alt="Domo">
+                </a>
+            </div>
+            
+            <!-- 5 Columns -->
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="https://www.domo.com/platform">Product Overview</a>
+                    <a href="https://www.domo.com/product/new-features">New Features</a>
+                    <a href="https://www.domo.com/features">All Features</a>
+                    <a href="https://www.domo.com/pricing">Pricing</a>
+                    <a href="https://www.domo.com/form/watch-demo">Watch Demo</a>
+                    <a href="https://www.domo.com/start/free">Try Free</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <a href="https://www.domo.com/industries/overview">By Industry</a>
+                    <a href="https://www.domo.com/roles/overview">By Team</a>
+                    <a href="https://www.domo.com/domo-for-enterprise">Domo for Enterprise</a>
+                    <a href="https://www.domo.com/domo-for-business">Domo for Business</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="https://www.domo.com/learn">Resource Library</a>
+                    <a href="https://www.domo.com/blog">Blog</a>
+                    <a href="https://www.domo.com/customers">Customer Stories</a>
+                    <a href="https://www.domo.com/events">Events</a>
+                    <a href="https://www.domo.com/charts">Charts</a>
+                    <a href="https://www.domo.com/glossary">Glossary</a>
+                    <a href="https://www.domo.com/ai/agents">AI Agent Templates</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Domo Central</h4>
+                    <a href="https://www.domo.com/domo-central">Domo Central</a>
+                    <a href="https://www.domo.com/domo-central/community">Community</a>
+                    <a href="https://www.domo.com/domo-central/help">Community Help</a>
+                    <a href="https://domo-support.domo.com/s/knowledge-base">Knowledge Base</a>
+                    <a href="https://developer.domo.com/">Developer</a>
+                    <a href="https://www.domo.com/domo-central/university">Domo University</a>
+                    <a href="https://learndomo.domo.com/pages/16/get-certified">Certifications</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="https://www.domo.com/company">About Us</a>
+                    <a href="https://www.domo.com/company/executives">Leadership</a>
+                    <a href="https://www.domo.com/partners/overview">Partners</a>
+                    <a href="https://www.domoinvestors.com/">Investor Relations</a>
+                    <a href="https://www.domo.com/company/careers">Careers</a>
+                    <a href="https://www.domo.com/form/talk-to-sales">Talk to Sales</a>
+                    <a href="https://www.domo.com/company/contact-us">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Language Selector -->
+            <div class="footer-language">
+                <button class="language-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    English
+                    <svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor"/></svg>
+                </button>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/domoHQ/" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="https://x.com/domotalk" aria-label="X">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/domo-inc-" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/domo/" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+                    </a>
+                </div>
+                
+                <p class="footer-copyright">Copyright © 2011 — 2026 Domo, Inc.</p>
+                
+                <div class="footer-legal">
+                    <a href="https://www.domo.com/company/cookies">Domo Cookies</a>
+                    <span>|</span>
+                    <a href="https://www.domo.com/company/privacy-policy">Privacy Notice</a>
+                    <span>|</span>
+                    <a href="https://www.domo.com/company/data-privacy-framework-notice">Data Privacy Framework</a>
+                    <span>|</span>
+                    <a href="https://www.domo.com/company/terms-of-use">Terms of Use</a>
+                    <span>|</span>
+                    <a href="https://www.domo.com/company/patents">Patents</a>
+                    <span>|</span>
+                    <a href="https://www.domo.com/company/california-residents">CA Do Not Sell or Share My Personal Information</a>
+                    <span>|</span>
+                    <a href="https://www.domo.com/company/modern-slavery-statement">Modern Slavery Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active from all tabs and content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active to clicked tab and corresponding content
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                
+                // If wasn't open, open it
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
