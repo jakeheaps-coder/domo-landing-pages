@@ -916,99 +916,99 @@
     <section class="product-tabs">
         <div class="container">
             <div class="tabs-nav">
-                <button class="tab-btn active" data-tab="build">Build</button>
-                <button class="tab-btn" data-tab="connect">Connect</button>
-                <button class="tab-btn" data-tab="govern">Govern</button>
-                <button class="tab-btn" data-tab="monitor">Monitor</button>
-                <button class="tab-btn" data-tab="scale">Scale</button>
+                <button class="tab-btn active" data-tab="connect">Connect</button>
+                <button class="tab-btn" data-tab="database">Database</button>
+                <button class="tab-btn" data-tab="warehouse">Warehouse</button>
+                <button class="tab-btn" data-tab="files">Files</button>
+                <button class="tab-btn" data-tab="apis">APIs</button>
             </div>
             
-            <div class="tab-content active" id="build">
+            <div class="tab-content active" id="connect">
                 <div class="tab-panel">
                     <div class="tab-panel-content">
-                        <h3>Build Agents Fast</h3>
-                        <p>Create AI agents in minutes with templates, visual workflows, and flexible LLM options.</p>
+                        <h3>Cloud Apps</h3>
+                        <p>Connect to 500+ cloud applications with pre-built connectors that sync your data automatically.</p>
                         <ul class="tab-panel-features">
-                            <li>Pre-built agent templates for common use cases</li>
-                            <li>Visual workflow builder—no coding required</li>
-                            <li>Use DomoGPT, OpenAI, Anthropic, or your own models</li>
-                            <li>Define agent behaviors and guardrails upfront</li>
+                            <li>Salesforce, HubSpot, Marketo, and 500+ more</li>
+                            <li>OAuth authentication—no credentials stored</li>
+                            <li>Automatic schema detection and mapping</li>
+                            <li>Incremental updates to minimize API calls</li>
                         </ul>
                     </div>
                     <div class="tab-panel-visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
                     </div>
                 </div>
             </div>
             
-            <div class="tab-content" id="connect">
+            <div class="tab-content" id="database">
                 <div class="tab-panel">
                     <div class="tab-panel-content">
-                        <h3>Connect to Your Data</h3>
-                        <p>Agents access your governed Domo datasets directly—no custom pipelines or data exports.</p>
+                        <h3>SQL & NoSQL Databases</h3>
+                        <p>Direct connections to your production and analytical databases with enterprise-grade security.</p>
                         <ul class="tab-panel-features">
-                            <li>RAG capabilities with enterprise datasets</li>
-                            <li>1,000+ data connectors available</li>
-                            <li>Real-time data access, not stale exports</li>
-                            <li>Inherit existing data governance policies</li>
+                            <li>MySQL, PostgreSQL, SQL Server, Oracle</li>
+                            <li>MongoDB, Cassandra, Redis, DynamoDB</li>
+                            <li>SSH tunneling and VPN support</li>
+                            <li>Query pushdown for optimal performance</li>
                         </ul>
                     </div>
                     <div class="tab-panel-visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                     </div>
                 </div>
             </div>
             
-            <div class="tab-content" id="govern">
+            <div class="tab-content" id="warehouse">
                 <div class="tab-panel">
                     <div class="tab-panel-content">
-                        <h3>Govern Everything</h3>
-                        <p>Enterprise-grade security, compliance, and access controls built into every agent.</p>
+                        <h3>Data Warehouses</h3>
+                        <p>Native integrations with modern cloud data warehouses for petabyte-scale analytics.</p>
                         <ul class="tab-panel-features">
-                            <li>Role-based access controls (RBAC)</li>
-                            <li>Compliance-ready audit trails</li>
-                            <li>PII detection and data masking</li>
-                            <li>Centralized policy management</li>
+                            <li>Snowflake, BigQuery, Redshift, Databricks</li>
+                            <li>Federated queries across warehouses</li>
+                            <li>Writeback capabilities for reverse ETL</li>
+                            <li>Cost optimization with intelligent caching</li>
                         </ul>
                     </div>
                     <div class="tab-panel-visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                     </div>
                 </div>
             </div>
             
-            <div class="tab-content" id="monitor">
+            <div class="tab-content" id="files">
                 <div class="tab-panel">
                     <div class="tab-panel-content">
-                        <h3>Monitor & Control</h3>
-                        <p>Human-in-the-loop oversight ensures agents work as intended with full transparency.</p>
+                        <h3>Files & Spreadsheets</h3>
+                        <p>Upload files or connect to cloud storage for seamless spreadsheet and flat file integration.</p>
                         <ul class="tab-panel-features">
-                            <li>Real-time agent activity dashboards</li>
-                            <li>Approval workflows for critical actions</li>
-                            <li>Complete audit logs and decision trails</li>
-                            <li>Alert on anomalies or policy violations</li>
+                            <li>CSV, Excel, JSON, XML, and Parquet</li>
+                            <li>Google Sheets, Box, Dropbox, OneDrive</li>
+                            <li>SFTP and S3 bucket monitoring</li>
+                            <li>Automatic data type detection</li>
                         </ul>
                     </div>
                     <div class="tab-panel-visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                     </div>
                 </div>
             </div>
             
-            <div class="tab-content" id="scale">
+            <div class="tab-content" id="apis">
                 <div class="tab-panel">
                     <div class="tab-panel-content">
-                        <h3>Scale with Confidence</h3>
-                        <p>Deploy across the enterprise with orchestration, versioning, and multi-agent coordination.</p>
+                        <h3>APIs & Webhooks</h3>
+                        <p>Connect to any REST API or receive real-time data via webhooks—no coding required.</p>
                         <ul class="tab-panel-features">
-                            <li>Multi-agent orchestration and handoffs</li>
-                            <li>Version control and rollback capabilities</li>
-                            <li>Enterprise-scale infrastructure</li>
-                            <li>Usage analytics and cost management</li>
+                            <li>Visual API connector builder</li>
+                            <li>Custom authentication (OAuth, API keys, JWT)</li>
+                            <li>Webhook endpoints for real-time data push</li>
+                            <li>GraphQL and SOAP support</li>
                         </ul>
                     </div>
                     <div class="tab-panel-visual">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                     </div>
                 </div>
             </div>
@@ -1021,51 +1021,42 @@
     <section class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Enterprise AI Agents, Governed and Controlled</h2>
-                <p>Agent Catalyst unifies AI agent creation, deployment, and management in a single governed platform. No more tool sprawl. No more shadow AI.</p>
+                <h2>Every Data Source, One Platform</h2>
+                <p>From Salesforce to Snowflake, connect all your data in one place. No more data silos. No more manual exports.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
                         </svg>
                     </div>
-                    <h3>Human-in-the-Loop Control</h3>
-                    <p>Critical decisions always include human oversight. Set guardrails, define approval workflows, and maintain control at every step.</p>
-                    <a href="#" class="feature-link">Learn more →</a>
+                    <h3>Cloud Apps (500+)</h3>
+                    <p>Pre-built connectors for Salesforce, HubSpot, Google Analytics, Adobe, Marketo, and hundreds more. Connect in clicks, not code.</p>
+                    <a href="#" class="feature-link">Browse connectors →</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="9" y1="9" x2="15" y2="15"/>
-                            <line x1="15" y1="9" x2="9" y2="15"/>
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
                         </svg>
                     </div>
-                    <h3>Governed Data Access</h3>
-                    <p>Agents connect directly to your governed Domo datasets. No custom pipelines. No data leakage. Enterprise-grade security built in.</p>
-                    <a href="#" class="feature-link">Learn more →</a>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                    </div>
-                    <h3>24/7 Automation</h3>
-                    <p>Agents work around the clock—processing invoices, scheduling, data entry—while you focus on strategic work that moves the business.</p>
+                    <h3>Databases</h3>
+                    <p>Direct connections to MySQL, PostgreSQL, SQL Server, Oracle, MongoDB, and more. Secure tunneling and real-time sync included.</p>
                     <a href="#" class="feature-link">Learn more →</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
-                    <h3>Flexible LLM Options</h3>
-                    <p>Use DomoGPT, connect third-party models, or bring your own. Orchestration and governance work with any foundation model.</p>
+                    <h3>Data Warehouses</h3>
+                    <p>Native integrations with Snowflake, BigQuery, Redshift, and Databricks. Federated queries and writeback capabilities built in.</p>
                     <a href="#" class="feature-link">Learn more →</a>
                 </div>
                 <div class="feature-card">
@@ -1077,20 +1068,32 @@
                             <line x1="16" y1="17" x2="8" y2="17"/>
                         </svg>
                     </div>
-                    <h3>Pre-Built Templates</h3>
-                    <p>Start fast with expert-built agent templates. Finance, HR, Operations, Customer Service—proven patterns ready to deploy.</p>
+                    <h3>Files & Spreadsheets</h3>
+                    <p>Upload CSV, Excel, JSON, or connect to Google Sheets, Box, and Dropbox. Automatic schema detection and data type mapping.</p>
                     <a href="#" class="feature-link">Learn more →</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="20" x2="12" y2="10"/>
-                            <line x1="18" y1="20" x2="18" y2="4"/>
-                            <line x1="6" y1="20" x2="6" y2="16"/>
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
                         </svg>
                     </div>
-                    <h3>Measurable ROI</h3>
-                    <p>Track agent performance, measure time saved, and quantify business impact. Clear metrics prove the value of your AI investment.</p>
+                    <h3>APIs & Webhooks</h3>
+                    <p>Connect to any REST API with our visual connector builder. Receive real-time data via webhooks—no coding required.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3>On-Premises</h3>
+                    <p>Secure connections to on-premises systems via Domo Workbench. Your data stays behind your firewall until you're ready to sync.</p>
                     <a href="#" class="feature-link">Learn more →</a>
                 </div>
             </div>
@@ -1103,36 +1106,36 @@
     <section class="value-props">
         <div class="container">
             <div class="section-header">
-                <h2>Results That Matter</h2>
-                <p>Agent Catalyst customers see immediate impact across their operations.</p>
+                <h2>Why Domo Integrations?</h2>
+                <p>The fastest, most comprehensive way to connect all your data.</p>
             </div>
             <div class="value-grid">
                 <div class="value-item">
-                    <div class="value-number">80%</div>
+                    <div class="value-number">1000+</div>
                     <div>
-                        <h3>Reduction in Manual Tasks</h3>
-                        <p>Automate repetitive work like invoice processing, scheduling, and data entry—freeing your team for strategic initiatives.</p>
+                        <h3>Pre-Built Connectors</h3>
+                        <p>The largest library of data connectors—from cloud apps to on-premises databases. If you use it, we connect to it.</p>
                     </div>
                 </div>
                 <div class="value-item">
-                    <div class="value-number">24/7</div>
+                    <div class="value-number">5 min</div>
                     <div>
-                        <h3>Always-On Operations</h3>
-                        <p>AI agents work around the clock, ensuring critical processes never wait for human availability.</p>
+                        <h3>Average Setup Time</h3>
+                        <p>Most connectors are live in under 5 minutes. No coding, no IT tickets, no waiting. Just authenticate and go.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">Real-Time</div>
+                    <div>
+                        <h3>Data Freshness</h3>
+                        <p>Automated refresh schedules from minutes to real-time streaming. Your dashboards always show current data.</p>
                     </div>
                 </div>
                 <div class="value-item">
                     <div class="value-number">100%</div>
                     <div>
-                        <h3>Governed & Compliant</h3>
-                        <p>Every agent action is logged, auditable, and connected to your governed data sources. No shadow AI.</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-number">1</div>
-                    <div>
-                        <h3>Unified Platform</h3>
-                        <p>Eliminate AI tool sprawl. One platform for building, deploying, and managing all your enterprise AI agents.</p>
+                        <h3>Cloud Native</h3>
+                        <p>No servers to manage, no infrastructure to maintain. Domo handles scaling, security, and reliability automatically.</p>
                     </div>
                 </div>
             </div>
@@ -1146,33 +1149,33 @@
         <div class="container">
             <div class="section-header">
                 <h2>What Our Customers Say</h2>
-                <p>See how enterprises are transforming with Agent Catalyst</p>
+                <p>See how enterprises are unifying their data with Domo Integrations</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"Agent Catalyst transformed how we handle routine operations. We've automated 80% of our invoice processing while maintaining complete oversight and control. The ROI was clear within the first quarter."</p>
+                    <p class="testimonial-quote">"We had data trapped in 47 different systems. Domo connected all of them in under a month—Salesforce, NetSuite, our data warehouse, even legacy on-prem databases. Now we have one source of truth."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-info">
-                            <h4>Sarah Chen</h4>
-                            <p>VP of Operations, Fortune 500 Retailer</p>
+                            <h4>Rachel Martinez</h4>
+                            <p>VP of Data & Analytics, Global Manufacturing</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"The governance features are what sold us. Our compliance team finally signed off on AI because everything is auditable, traceable, and controlled. We went from pilot to production in 6 weeks."</p>
+                    <p class="testimonial-quote">"Our marketing team used to wait 2 weeks for IT to pull campaign data from different platforms. Now they connect their own data sources and have live dashboards updating every 15 minutes."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-info">
-                            <h4>Michael Torres</h4>
-                            <p>CIO, Financial Services</p>
+                            <h4>David Kim</h4>
+                            <p>CMO, E-commerce Company</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"We tried building our own agent framework. After 8 months and $2M, we switched to Agent Catalyst and had production agents running in 3 weeks. Should have started here."</p>
+                    <p class="testimonial-quote">"The Snowflake integration was a game-changer. We can query billions of rows directly without moving data anywhere. Our BI costs dropped 60% and performance actually improved."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-info">
-                            <h4>Jennifer Walsh</h4>
-                            <p>Head of AI, Healthcare Company</p>
+                            <h4>Amanda Foster</h4>
+                            <p>Director of Engineering, FinTech Startup</p>
                         </div>
                     </div>
                 </div>
@@ -1187,43 +1190,43 @@
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about Agent Catalyst</p>
+                <p>Everything you need to know about Domo Integrations</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <button class="faq-question">What is Agent Catalyst?</button>
+                    <button class="faq-question">How many data connectors does Domo have?</button>
                     <div class="faq-answer">
-                        <p>Agent Catalyst is Domo's enterprise AI agent platform that lets you build, deploy, and govern AI agents at scale. It combines agent orchestration with Domo's data governance, giving you the ability to automate complex tasks while maintaining complete control and visibility.</p>
+                        <p>Domo offers over 1,000 pre-built connectors covering cloud applications, databases, data warehouses, file storage, and APIs. This includes popular tools like Salesforce, Google Analytics, Snowflake, SAP, Workday, and hundreds more. If we don't have a connector, you can build custom ones with our visual API connector or SDK.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">How is this different from ChatGPT or other AI tools?</button>
+                    <button class="faq-question">How long does it take to connect a data source?</button>
                     <div class="faq-answer">
-                        <p>Unlike general-purpose AI chatbots, Agent Catalyst creates purpose-built agents that take action on your behalf—processing data, triggering workflows, and making decisions within guardrails you define. It's integrated with your enterprise data and includes governance, audit trails, and human-in-the-loop controls that consumer AI tools lack.</p>
+                        <p>Most cloud app connectors can be set up in under 5 minutes—just authenticate with OAuth and select the data you want. Database connections may take slightly longer depending on network configuration. On average, customers have their first data flowing within an hour of signing up.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">What LLMs does Agent Catalyst support?</button>
+                    <button class="faq-question">Is my data secure during transfer?</button>
                     <div class="faq-answer">
-                        <p>Agent Catalyst is model-agnostic. You can use DomoGPT (Domo's built-in model), connect to OpenAI, Anthropic, Google, or other providers, or bring your own fine-tuned models. The orchestration and governance layer works regardless of which LLM powers your agents.</p>
+                        <p>Absolutely. All data transfers are encrypted in transit using TLS 1.2+. We support SSH tunneling for database connections and can work within your VPN. Domo is SOC 2 Type II certified, HIPAA compliant, and GDPR compliant. Your credentials are encrypted and never visible to Domo employees.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">How do you handle data security and compliance?</button>
+                    <button class="faq-question">Can I connect to on-premises systems behind a firewall?</button>
                     <div class="faq-answer">
-                        <p>Security is built into every layer. Agent Catalyst inherits Domo's enterprise-grade security including SOC 2 Type II, HIPAA, and GDPR compliance. All agent actions are logged, data access follows your existing governance policies, and you can implement PII detection, data masking, and approval workflows for sensitive operations.</p>
+                        <p>Yes. Domo Workbench is a secure, lightweight agent that runs inside your network and connects to on-premises databases, file systems, and applications. Data is pushed to Domo on your schedule—nothing opens inbound ports or exposes your systems to the internet.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Do I need technical skills to build agents?</button>
+                    <button class="faq-question">How often can data be refreshed?</button>
                     <div class="faq-answer">
-                        <p>No. Agent Catalyst includes a visual workflow builder and pre-built templates that let business users create agents without coding. Technical teams can go deeper with custom configurations, API integrations, and advanced orchestration—but it's not required to get started.</p>
+                        <p>Refresh frequency depends on your plan and the data source. Most connectors support schedules from every 15 minutes to daily. For real-time needs, we offer streaming connectors and webhook endpoints that push data as events occur. Enterprise plans include more frequent refresh options.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">What's the typical time to value?</button>
+                    <button class="faq-question">What if I need a connector that doesn't exist?</button>
                     <div class="faq-answer">
-                        <p>Most customers have their first production agent running within 2-4 weeks. The combination of templates, governed data access, and built-in orchestration eliminates months of infrastructure work. Many see ROI within the first quarter from automating high-volume manual tasks.</p>
+                        <p>You have options. Our Connector Dev Studio lets you build custom connectors visually—no coding required for REST APIs. For complex integrations, use our Connector SDK or request a custom connector from our team. Many customer-requested connectors get added to our library within weeks.</p>
                     </div>
                 </div>
             </div>
@@ -1235,8 +1238,8 @@
          ======================================== -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your AI Strategy?</h2>
-            <p>See how Agent Catalyst can help you build, deploy, and govern AI agents that deliver real business results.</p>
+            <h2>Ready to Connect All Your Data?</h2>
+            <p>See how Domo Integrations can unify your data sources and power real-time insights across your organization.</p>
             <div class="cta-buttons">
                 <a href="https://www.domo.com/form/talk-to-sales" class="btn btn-white">Talk to Sales</a>
                 <a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch Demo</a>
@@ -1368,7 +1371,10 @@
                 
                 // Add active to clicked tab and corresponding content
                 btn.classList.add('active');
-                document.getElementById(btn.dataset.tab).classList.add('active');
+                const tabContent = document.getElementById(btn.dataset.tab);
+                if (tabContent) {
+                    tabContent.classList.add('active');
+                }
             });
         });
         
