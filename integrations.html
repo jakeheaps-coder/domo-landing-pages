@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domo Integrations | 1000+ Data Connectors</title>
+    <meta name="description" content="Connect to any data source in minutes. 1000+ pre-built connectors for cloud apps, databases, files, and APIs. No coding required.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --domo-blue: #99CCEE; --domo-blue-dark: #7AB8E0; --dark-bg: #1a1a2e; --text-primary: #1a1a2e; --text-secondary: #4a5568; --white: #ffffff; --light-gray: #f7fafc; --border-gray: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); line-height: 1.6; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .nav { background: var(--white); padding: 16px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo img { height: 32px; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { color: var(--text-primary); text-decoration: none; font-weight: 500; }
+        .nav-ctas { display: flex; gap: 12px; }
+        .nav-btn { padding: 10px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; }
+        .nav-btn-outline { border: 2px solid var(--domo-blue); color: var(--text-primary); }
+        .nav-btn-primary { background: var(--domo-blue); color: var(--text-primary); }
+        .hero { padding: 80px 0; background: linear-gradient(135deg, #f8fcff 0%, #e8f4fc 100%); }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .hero h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
+        .hero p { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; }
+        .hero-ctas { display: flex; gap: 16px; }
+        .btn { padding: 14px 28px; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-block; }
+        .btn-primary { background: var(--domo-blue); color: var(--text-primary); }
+        .btn-secondary { border: 2px solid var(--domo-blue); color: var(--text-primary); }
+        .hero-visual img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .trust { padding: 48px 0; background: var(--white); border-bottom: 1px solid var(--border-gray); }
+        .trust p { text-align: center; color: var(--text-secondary); margin-bottom: 24px; }
+        .trust-logos { display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap; opacity: 0.6; }
+        .trust-logos svg { height: 32px; width: auto; }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 48px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 16px; }
+        .section-header p { color: var(--text-secondary); font-size: 1.125rem; }
+        .features { padding: 80px 0; background: var(--light-gray); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .feature-card { background: var(--white); padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .feature-icon { width: 48px; height: 48px; background: var(--domo-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+        .feature-icon svg { width: 24px; height: 24px; stroke: var(--text-primary); }
+        .feature-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+        .feature-card p { color: var(--text-secondary); margin-bottom: 16px; }
+        .feature-link { color: var(--domo-blue-dark); text-decoration: none; font-weight: 600; }
+        .value-props { padding: 80px 0; background: var(--white); }
+        .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .value-item { text-align: center; }
+        .value-number { font-size: 3.5rem; font-weight: 700; color: var(--domo-blue-dark); margin-bottom: 8px; }
+        .value-item h3 { font-size: 1.125rem; margin-bottom: 8px; }
+        .value-item p { color: var(--text-secondary); font-size: 0.9rem; }
+        .testimonials { padding: 80px 0; background: var(--light-gray); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .testimonial-card { background: var(--white); padding: 32px; border-radius: 12px; }
+        .testimonial-quote { font-size: 1rem; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+        .testimonial-author h4 { font-size: 1rem; margin-bottom: 4px; }
+        .testimonial-author p { color: var(--text-secondary); font-size: 0.875rem; }
+        .cta-section { padding: 80px 0; background: var(--dark-bg); color: var(--white); text-align: center; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 16px; }
+        .cta-section p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; }
+        .btn-white { background: var(--white); color: var(--text-primary); }
+        .domo-footer { background: #000; color: var(--white); padding: 64px 0 32px; }
+        .footer-logo { text-align: center; margin-bottom: 48px; }
+        .footer-logo img { height: 40px; filter: brightness(0) invert(1); }
+        .footer-columns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; margin-bottom: 48px; }
+        .footer-col h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; padding: 6px 0; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; display: flex; justify-content: space-between; font-size: 0.875rem; color: rgba(255,255,255,0.5); }
+        .footer-legal { display: flex; gap: 24px; }
+        .footer-legal a { color: rgba(255,255,255,0.5); text-decoration: none; }
+        @media (max-width: 992px) { .hero-content { grid-template-columns: 1fr; } .features-grid, .testimonials-grid { grid-template-columns: 1fr; } .value-grid { grid-template-columns: repeat(2, 1fr); } .footer-columns { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2.25rem; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .value-grid, .footer-columns { grid-template-columns: 1fr; } .cta-buttons { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="container"><a href="https://www.domo.com" class="nav-logo"><img src="assets/domo-logo-official.svg" alt="Domo"></a><div class="nav-links"><a href="https://www.domo.com/platform">Platform</a><a href="https://www.domo.com/solutions">Solutions</a><a href="https://www.domo.com/pricing">Pricing</a><a href="https://www.domo.com/resources">Resources</a></div><div class="nav-ctas"><a href="https://www.domo.com/form/watch-demo" class="nav-btn nav-btn-outline">Watch Demo</a><a href="https://www.domo.com/start/free" class="nav-btn nav-btn-primary">Try Free</a></div></div></nav>
+
+    <section class="hero"><div class="container"><div class="hero-content"><div class="hero-text"><h1>Connect to Any Data Source</h1><p>1,000+ pre-built connectors for cloud apps, databases, files, and APIs. Get your data flowing in minutes—no coding required.</p><div class="hero-ctas"><a href="https://www.domo.com/form/talk-to-sales" class="btn btn-primary">Talk to Sales</a><a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch a Demo</a></div></div><div class="hero-visual"><img src="assets/integrations-hero.png" alt="Domo data connectors interface" loading="lazy"></div></div></div></section>
+
+    <section class="trust"><div class="container"><p>Trusted by leading companies worldwide</p><div class="trust-logos"><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">ESPN</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">eBay</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Cisco</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Emerson</text></svg><svg viewBox="0 0 120 40"><text x="10" y="28" font-family="Arial" font-size="16" font-weight="bold" fill="#333">DHL</text></svg></div></div></section>
+
+    <section class="features"><div class="container"><div class="section-header"><h2>Every Data Source, One Platform</h2><p>From Salesforce to Snowflake, Google Analytics to SAP—connect all your data in one place.</p></div><div class="features-grid">
+        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg></div><h3>Cloud Apps</h3><p>Salesforce, HubSpot, Marketo, Workday, ServiceNow, and 500+ more cloud applications.</p><a href="#" class="feature-link">Browse connectors →</a></div>
+        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><h3>Databases</h3><p>MySQL, PostgreSQL, SQL Server, Oracle, MongoDB, and all major databases—cloud or on-prem.</p><a href="#" class="feature-link">Browse connectors →</a></div>
+        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><h3>Data Warehouses</h3><p>Snowflake, BigQuery, Redshift, Databricks—federate or import from your existing warehouse.</p><a href="#" class="feature-link">Browse connectors →</a></div>
+        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Files & Spreadsheets</h3><p>Excel, CSV, Google Sheets, Box, Dropbox, S3—import files from anywhere automatically.</p><a href="#" class="feature-link">Browse connectors →</a></div>
+        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>APIs & Webhooks</h3><p>Connect any REST API with our no-code connector builder. Webhooks for real-time data.</p><a href="#" class="feature-link">Browse connectors →</a></div>
+        <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>On-Premises</h3><p>Secure on-prem connector for data behind your firewall. No VPN or port forwarding required.</p><a href="#" class="feature-link">Learn more →</a></div>
+    </div></div></section>
+
+    <section class="value-props"><div class="container"><div class="section-header"><h2>Results That Matter</h2><p>Domo customers see immediate impact on data accessibility and time-to-insight.</p></div><div class="value-grid">
+        <div class="value-item"><div class="value-number">1000+</div><h3>Pre-Built Connectors</h3><p>The largest library of native connectors. If it has data, Domo can connect to it.</p></div>
+        <div class="value-item"><div class="value-number">5 min</div><h3>Average Setup Time</h3><p>Most connectors are live in under 5 minutes. No coding, no IT tickets.</p></div>
+        <div class="value-item"><div class="value-number">Real-Time</div><h3>Data Freshness</h3><p>From 15-minute refreshes to real-time streaming. Always current data.</p></div>
+        <div class="value-item"><div class="value-number">100%</div><h3>Cloud Native</h3><p>No infrastructure to manage. Connectors scale automatically with your data.</p></div>
+    </div></div></section>
+
+    <section class="testimonials"><div class="container"><div class="section-header"><h2>What Our Customers Say</h2><p>See how companies are connecting all their data with Domo</p></div><div class="testimonials-grid">
+        <div class="testimonial-card"><p class="testimonial-quote">"We connected 47 different data sources in the first month. What would have taken our team a year to build, Domo had out of the box."</p><div class="testimonial-author"><h4>David Kim</h4><p>VP of Data Engineering, Retail</p></div></div>
+        <div class="testimonial-card"><p class="testimonial-quote">"The Salesforce connector alone saves us 20 hours a week of manual data exports. And it's always up to date—no more stale reports."</p><div class="testimonial-author"><h4>Jennifer Adams</h4><p>Revenue Operations, SaaS Company</p></div></div>
+        <div class="testimonial-card"><p class="testimonial-quote">"We have on-prem databases that we thought would be impossible to connect. Domo's Workbench made it simple and secure."</p><div class="testimonial-author"><h4>Robert Chang</h4><p>IT Director, Manufacturing</p></div></div>
+    </div></div></section>
+
+    <section class="cta-section"><div class="container"><h2>Ready to Connect All Your Data?</h2><p>See how Domo can bring together every data source in your organization—in minutes, not months.</p><div class="cta-buttons"><a href="https://www.domo.com/form/talk-to-sales" class="btn btn-white">Talk to Sales</a><a href="https://www.domo.com/form/watch-demo" class="btn btn-secondary">Watch Demo</a></div></div></section>
+
+    <footer class="domo-footer"><div class="container"><div class="footer-logo"><a href="https://www.domo.com"><img src="assets/domo-logo-official.svg" alt="Domo"></a></div><div class="footer-columns"><div class="footer-col"><h4>Product</h4><a href="https://www.domo.com/platform">Platform Overview</a><a href="https://www.domo.com/pricing">Pricing</a></div><div class="footer-col"><h4>Solutions</h4><a href="https://www.domo.com/solutions">By Role</a><a href="https://www.domo.com/solutions">By Industry</a></div><div class="footer-col"><h4>Resources</h4><a href="https://www.domo.com/resources">Resource Library</a><a href="https://www.domo.com/blog">Blog</a></div><div class="footer-col"><h4>Company</h4><a href="https://www.domo.com/company">About</a><a href="https://www.domo.com/company/careers">Careers</a></div><div class="footer-col"><h4>Support</h4><a href="https://www.domo.com/support">Help Center</a><a href="https://dojo.domo.com">Domo Dojo</a></div></div><div class="footer-bottom"><p>© 2026 Domo, Inc. All rights reserved.</p><div class="footer-legal"><a href="https://www.domo.com/company/privacy">Privacy Policy</a><a href="https://www.domo.com/company/terms">Terms of Service</a></div></div></div></footer>
+</body>
+</html>
